@@ -1,0 +1,24 @@
+.lkt-step-process {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lkt-step-process_content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lkt-step-process-buttons {
+    position: sticky;
+    top: calc(-1 * var(--gap));
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--gap);
+    transition: all linear .150s;
+    background: #ffffff;
+    z-index: 2;
+    padding: var(--gap) 0;
+}
