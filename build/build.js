@@ -22,7 +22,7 @@ const Z = {
       for (let k in p)
         k.indexOf("step-") !== -1 && r.push(k.substring(5));
       return r;
-    }), d = l(() => e.value.step ? e.value.step : !e.value.steps || !e.value.steps[0] ? null : e.value.steps[0].name), a = l(() => e.value.steps.findIndex((r) => r.name === d.value)), t = l(() => e.value.steps[a.value]), P = l(() => typeof t.value.prevValidator == "function" ? t.value.prevValidator(e.value) : typeof t.value.prevValidator == "boolean" ? t.value.prevValidator : typeof s.prevValidator == "function" ? s.prevValidator(e.value) : !0), $ = l(() => typeof t.value.nextValidator == "function" ? t.value.nextValidator(e.value) : typeof t.value.nextValidator == "boolean" ? t.value.nextValidator : typeof s.nextValidator == "function" ? s.nextValidator(e.value) : !0), j = l(() => a.value === 0 || !P.value), q = l(() => a.value === e.value.steps.length - 1 || !$.value), w = l(() => typeof t.value.prevHidden == "function" ? t.value.prevHidden(e.value) : typeof t.value.prevHidden == "boolean" ? t.value.prevHidden : a.value === 0), F = l(() => typeof t.value.nextHidden == "function" ? t.value.nextHidden(e.value) : typeof t.value.nextHidden == "boolean" ? t.value.nextHidden : a.value === e.value.steps.length - 1), E = l(() => typeof t.value.prevConfirm == "string" ? t.value.prevConfirm : ""), I = l(() => typeof t.value.nextConfirm == "string" ? t.value.nextConfirm : ""), O = l(() => typeof t.value.nextResource == "string" ? t.value.nextResource : ""), T = l(() => typeof t.value.nextResourceData == "object" ? t.value.nextResourceData : {}), z = l(() => {
+    }), d = l(() => e.value.step ? e.value.step : !e.value.steps || !e.value.steps[0] ? null : e.value.steps[0].name), a = l(() => e.value.steps.findIndex((r) => r.name === d.value)), t = l(() => e.value.steps[a.value]), $ = l(() => typeof t.value.prevValidator == "function" ? t.value.prevValidator(e.value) : typeof t.value.prevValidator == "boolean" ? t.value.prevValidator : typeof s.prevValidator == "function" ? s.prevValidator(e.value) : !0), P = l(() => typeof t.value.nextValidator == "function" ? t.value.nextValidator(e.value) : typeof t.value.nextValidator == "boolean" ? t.value.nextValidator : typeof s.nextValidator == "function" ? s.nextValidator(e.value) : !0), j = l(() => a.value === 0 || !$.value), q = l(() => a.value === e.value.steps.length - 1 || !P.value), w = l(() => typeof t.value.prevHidden == "function" ? t.value.prevHidden(e.value) : typeof t.value.prevHidden == "boolean" ? t.value.prevHidden : a.value === 0), F = l(() => typeof t.value.nextHidden == "function" ? t.value.nextHidden(e.value) : typeof t.value.nextHidden == "boolean" ? t.value.nextHidden : a.value === e.value.steps.length - 1), E = l(() => typeof t.value.prevConfirm == "string" ? t.value.prevConfirm : ""), I = l(() => typeof t.value.nextConfirm == "string" ? t.value.nextConfirm : ""), O = l(() => typeof t.value.nextResource == "string" ? t.value.nextResource : ""), T = l(() => typeof t.value.nextResourceData == "object" ? t.value.nextResourceData : {}), z = l(() => {
       const r = ["lkt-step-process"];
       return d.value && r.push(`step-${d.value}`), r.join(" ");
     }), A = (r) => {
@@ -104,8 +104,7 @@ const Z = {
       ], 2);
     };
   }
-});
-const ve = {
+}), ve = {
   install: (v, g = {}) => {
     v.component("lkt-step-process", se);
   }
