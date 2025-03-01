@@ -1,4 +1,4 @@
-import {LktObject} from "lkt-ts-interfaces";
+import {LktObject} from "lkt-vue-kernel";
 import {Step} from "./Step";
 
 export type StepProcess = {

@@ -1,7 +1,3 @@
-<script lang="ts">
-export default {name: "LktStepProcess", inheritAttrs: false}
-</script>
-
 <script setup lang="ts">
 import {ref, useSlots, computed} from "vue";
 import {StepProcess} from "../types/StepProcess";
@@ -20,7 +16,11 @@ const props = defineProps({
 
 const slots = useSlots();
 
-const emit = defineEmits(['next', 'prev', 'finish']);
+const emit = defineEmits([
+  'next',
+  'prev',
+  'finish'
+]);
 
 const isLoading = ref(false),
     config = ref(props.modelValue),

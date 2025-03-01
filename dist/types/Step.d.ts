@@ -1,4 +1,4 @@
-import { LktObject } from "lkt-ts-interfaces";
+import { LktObject } from "lkt-vue-kernel";
 export type Step = {
     name: string;
     readResource?: string;

@@ -1,4 +1,4 @@
-export { ve as default };
-declare namespace ve {
-    function install(v: any, g?: {}): void;
+export { ie as default };
+declare namespace ie {
+    function install(v: any, h?: {}): void;
 }
