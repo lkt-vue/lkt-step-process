@@ -169,31 +169,29 @@ defineExpose({
         <header class="lkt-step-process_header" v-if="displayHeader">
             <h1 class="lkt-step-process_header-title">{{ title }}</h1>
             <div class="lkt-step-process_header-slot">
-                <slot name="post-title" v-bind:config="config" v-bind:loading="isLoading"></slot>
+                <slot name="post-title" v-bind:config="config" v-bind:loading="isLoading"/>
             </div>
         </header>
         <div class="lkt-step-process-buttons">
             <lkt-button
                 :ref="(el:any) => prevButton = el"
                 v-show="!isLoading && !prevHidden"
-                palette="danger"
                 v-bind:disabled="prevDisabled"
                 v-bind:confirm-modal="prevConfirm"
                 v-on:click="onPrev">
-                <slot v-if="!!slots['button-prev']" name="button-prev" v-bind:config="config"></slot>
+                <slot v-if="!!slots['button-prev']" name="button-prev" v-bind:config="config"/>
                 <span v-else>Back</span>
             </lkt-button>
 
             <lkt-button
                 :ref="(el:any) => nextButton = el"
                 v-show="!isLoading && !nextHidden"
-                palette="success"
                 v-bind:disabled="nextDisabled"
                 v-bind:confirm-modal="nextConfirm"
                 v-bind:resource="nextResource"
                 v-bind:resource-data="nextResourceData"
                 v-on:click="onNext">
-                <slot v-if="!!slots['button-next']" name="button-next" v-bind:config="config"></slot>
+                <slot v-if="!!slots['button-next']" name="button-next" v-bind:config="config"/>
                 <span v-else>Next</span>
             </lkt-button>
         </div>
@@ -201,10 +199,10 @@ defineExpose({
         <div class="lkt-step-process_content" v-if="!isLoading">
             <div class="lkt-grid-1">
                 <div v-for="step in slotsSteps" v-show="step === currentStep">
-                    <slot :name="'step-'+step" v-bind:config="config"></slot>
+                    <slot :name="'step-'+step" v-bind:config="config"/>
                 </div>
             </div>
         </div>
-        <lkt-loader v-if="isLoading"></lkt-loader>
+        <lkt-loader v-if="isLoading"/>
     </article>
 </template>
