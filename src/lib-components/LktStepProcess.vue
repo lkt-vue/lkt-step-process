@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { computed, onMounted, ref, useSlots, watch } from 'vue';
+    import { computed, ref, useSlots, watch } from 'vue';
     import {
         ButtonConfig,
         getDefaultValues,
@@ -50,7 +50,7 @@
             return currentStepIndex.value === (stepsHaystack.value.length - 1);
         }),
         computedPrevButton = computed(() => {
-            let r: ButtonConfig = {...props.prevButton};
+            let r: ButtonConfig = { ...props.prevButton };
             if (currentStepConfig.value?.prevButton) {
                 r = { ...r, ...currentStepConfig.value?.prevButton };
             }
@@ -60,7 +60,7 @@
             return r;
         }),
         computedNextButton = computed(() => {
-            let r: ButtonConfig = {...props.nextButton};
+            let r: ButtonConfig = { ...props.nextButton };
             if (currentStepConfig.value?.nextButton) {
                 r = { ...r, ...currentStepConfig.value?.nextButton };
             }
@@ -71,7 +71,7 @@
         }),
         prevHidden = computed(() => {
             if (typeof currentStepConfig.value?.prevHidden === 'function') {
-                return currentStepConfig.value.prevHidden(stepsHaystack.value);
+                return currentStepConfig.value.prevHidden(currentStepConfig.value, stepsHaystack.value);
             }
             if (typeof currentStepConfig.value?.prevHidden === 'boolean') {
                 return currentStepConfig.value.prevHidden;
@@ -80,7 +80,7 @@
         }),
         nextHidden = computed(() => {
             if (typeof currentStepConfig.value?.nextHidden === 'function') {
-                return currentStepConfig.value.nextHidden(stepsHaystack.value);
+                return currentStepConfig.value.nextHidden(currentStepConfig.value, stepsHaystack.value);
             }
             if (typeof currentStepConfig.value?.nextHidden === 'boolean') {
                 return currentStepConfig.value.nextHidden;
