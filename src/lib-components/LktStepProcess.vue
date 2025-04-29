@@ -1,208 +1,153 @@
 <script setup lang="ts">
-import {ref, useSlots, computed} from "vue";
-import {StepProcess} from "../types/StepProcess";
-import {Step} from "../types/Step";
+    import { computed, onMounted, ref, useSlots, watch } from 'vue';
+    import {
+        ButtonConfig,
+        getDefaultValues,
+        StepProcess,
+        StepProcessConfig,
+        StepProcessStepConfig,
+    } from 'lkt-vue-kernel';
 
-const props = defineProps({
-    modelValue: {type: Object, required: false, default: (): StepProcess => ({step: 1, steps: [], data: {}})},
+    const props = withDefaults(defineProps<StepProcessConfig>(), getDefaultValues(StepProcess));
 
-    title: {type: String, default: ''},
-    nextText: {type: String, default: 'Next'},
-    prevText: {type: String, default: 'Back'},
+    const slots = useSlots();
 
-    nextValidator: {type: Function, required: false, default: () => true},
-    prevValidator: {type: Function, required: false, default: () => true},
-});
+    const emit = defineEmits([
+        'next',
+        'prev',
+        'finish',
+        'update:modelValue',
+        'update:loading',
+    ]);
 
-const slots = useSlots();
+    const isLoading = ref(props.loading),
+        currentStep = ref(props.modelValue),
+        stepsHaystack = ref(props.steps),
+        prevButtonRef = ref(null),
+        nextButtonRef = ref(null);
 
-const emit = defineEmits([
-  'next',
-  'prev',
-  'finish'
-]);
+    watch(() => props.loading, (value) => isLoading.value = value);
+    watch(() => props.modelValue, (value) => currentStep.value = value);
+    watch(isLoading, (value) => emit('update:loading', value));
+    watch(currentStep, (value) => emit('update:modelValue', value));
 
-const isLoading = ref(false),
-    config = ref(props.modelValue),
-    prevButton = ref(null),
-    nextButton = ref(null);
-
-const displayHeader = computed(() => {
-    if (isLoading.value) return false;
-
-    return props.title || !!slots['post-title'];
-});
-
-const slotsSteps = computed(() => {
-    let r = [];
-    for (let k in slots) if (k.indexOf('step-') !== -1) r.push(k.substring(5));
-    return r;
-})
-
-const currentStep = computed(() => {
-        if (!config.value.step) {
-            if (!config.value.steps) {
-                return null;
-            }
-            if (!config.value.steps[0]) return null;
-            return config.value.steps[0].name;
-        }
-        return config.value.step;
-    }),
-    currentStepIndex = computed(() => {
-        return config.value.steps.findIndex((step: Step) => step.name === currentStep.value);
-    }),
-    currentStepConfig = computed(() => {
-        return config.value.steps[currentStepIndex.value];
-    }),
-    prevValid = computed(() => {
-        if (typeof currentStepConfig.value.prevValidator === 'function') {
-            return currentStepConfig.value.prevValidator(config.value);
-        }
-        if (typeof currentStepConfig.value.prevValidator === 'boolean') {
-            return currentStepConfig.value.prevValidator;
-        }
-        if (typeof props.prevValidator === 'function') {
-            return props.prevValidator(config.value);
-        }
-        return true;
-    }),
-    nextValid = computed(() => {
-        if (typeof currentStepConfig.value.nextValidator === 'function') {
-            return currentStepConfig.value.nextValidator(config.value);
-        }
-        if (typeof currentStepConfig.value.nextValidator === 'boolean') {
-            return currentStepConfig.value.nextValidator;
-        }
-        if (typeof props.nextValidator === 'function') {
-            return props.nextValidator(config.value);
-        }
-        return true;
-    }),
-    prevDisabled = computed(() => {
-        return currentStepIndex.value === 0 || !prevValid.value;
-    }),
-    nextDisabled = computed(() => {
-        return currentStepIndex.value === (config.value.steps.length - 1) || !nextValid.value;
-    }),
-    prevHidden = computed(() => {
-        if (typeof currentStepConfig.value.prevHidden === 'function') {
-            return currentStepConfig.value.prevHidden(config.value);
-        }
-        if (typeof currentStepConfig.value.prevHidden === 'boolean') {
-            return currentStepConfig.value.prevHidden;
-        }
-        return currentStepIndex.value === 0;
-    }),
-    nextHidden = computed(() => {
-        if (typeof currentStepConfig.value.nextHidden === 'function') {
-            return currentStepConfig.value.nextHidden(config.value);
-        }
-        if (typeof currentStepConfig.value.nextHidden === 'boolean') {
-            return currentStepConfig.value.nextHidden;
-        }
-        return currentStepIndex.value === (config.value.steps.length - 1);
-    }),
-    prevConfirm = computed(() => {
-        if (typeof currentStepConfig.value.prevConfirm === 'string') {
-            return currentStepConfig.value.prevConfirm;
-        }
-        return '';
-    }),
-    nextConfirm = computed(() => {
-        if (typeof currentStepConfig.value.nextConfirm === 'string') {
-            return currentStepConfig.value.nextConfirm;
-        }
-        return '';
-    }),
-    nextResource = computed(() => {
-        if (typeof currentStepConfig.value.nextResource === 'string') {
-            return currentStepConfig.value.nextResource;
-        }
-        return '';
-    }),
-    nextResourceData = computed(() => {
-        if (typeof currentStepConfig.value.nextResourceData === 'object') {
-            return currentStepConfig.value.nextResourceData;
-        }
-        return {};
-    }),
-    classes = computed(() => {
-
-        const r = ['lkt-step-process'];
-
-        if (currentStep.value) r.push(`step-${currentStep.value}`);
-        return r.join(' ');
+    const slotsSteps = computed(() => {
+        let r = [];
+        for (let k in slots) if (k.indexOf('step-') !== -1) r.push(k.substring(5));
+        return r;
     });
 
-const onNext = (data: any) => {
-        config.value.step = config.value.steps[currentStepIndex.value + 1].name;
-        if (currentStepIndex.value === (config.value.steps.length - 1)) {
-            emit('finish', data);
+    const currentStepIndex = computed(() => {
+            return stepsHaystack.value.findIndex((step: StepProcessStepConfig) => step.key === currentStep.value);
+        }),
+        currentStepConfig = computed(() => {
+            return stepsHaystack.value[currentStepIndex.value];
+        }),
+        prevDisabled = computed(() => {
+            return currentStepIndex.value === 0;
+        }),
+        nextDisabled = computed(() => {
+            return currentStepIndex.value === (stepsHaystack.value.length - 1);
+        }),
+        computedPrevButton = computed(() => {
+            let r: ButtonConfig = {...props.prevButton};
+            if (currentStepConfig.value?.prevButton) {
+                r = { ...r, ...currentStepConfig.value?.prevButton };
+            }
+            if (typeof r.disabled === 'undefined') {
+                r.disabled = prevDisabled.value;
+            }
+            return r;
+        }),
+        computedNextButton = computed(() => {
+            let r: ButtonConfig = {...props.nextButton};
+            if (currentStepConfig.value?.nextButton) {
+                r = { ...r, ...currentStepConfig.value?.nextButton };
+            }
+            if (typeof r.disabled === 'undefined') {
+                r.disabled = nextDisabled.value;
+            }
+            return r;
+        }),
+        prevHidden = computed(() => {
+            if (typeof currentStepConfig.value?.prevHidden === 'function') {
+                return currentStepConfig.value.prevHidden(stepsHaystack.value);
+            }
+            if (typeof currentStepConfig.value?.prevHidden === 'boolean') {
+                return currentStepConfig.value.prevHidden;
+            }
+            return currentStepIndex.value === 0;
+        }),
+        nextHidden = computed(() => {
+            if (typeof currentStepConfig.value?.nextHidden === 'function') {
+                return currentStepConfig.value.nextHidden(stepsHaystack.value);
+            }
+            if (typeof currentStepConfig.value?.nextHidden === 'boolean') {
+                return currentStepConfig.value.nextHidden;
+            }
+            return currentStepIndex.value === (stepsHaystack.value.length - 1);
+        }),
+        classes = computed(() => {
+            const r = [];
+            if (currentStep.value) r.push(`step-${currentStep.value}`);
+            return r.join(' ');
+        });
 
-        } else {
-            emit('next', data);
-        }
-    },
-    onPrev = (data: any) => {
-        config.value.step = config.value.steps[currentStepIndex.value - 1].name;
-        emit('prev', data);
-    };
+    const onNext = (data: any) => {
+            currentStep.value = stepsHaystack.value[currentStepIndex.value + 1].key;
+            if (currentStepIndex.value === (stepsHaystack.value.length - 1)) {
+                emit('finish', data);
+
+            } else {
+                emit('next', data);
+            }
+        },
+        onPrev = (data: any) => {
+            currentStep.value = stepsHaystack.value[currentStepIndex.value - 1].key;
+            emit('prev', data);
+        };
 
 
-defineExpose({
-    goNext: () => {
-        // @ts-ignore
-        nextButton.value.click()
-    },
-    goPrev: () => {
-        // @ts-ignore
-        prevButton.value.click()
-    },
-    startLoader: () => isLoading.value = true,
-    stopLoader: () => isLoading.value = false,
-});
+    defineExpose({
+        goNext: () => {
+            // @ts-ignore
+            nextButtonRef.value.click();
+        },
+        goPrev: () => {
+            // @ts-ignore
+            prevButtonRef.value.click();
+        },
+        startLoader: () => isLoading.value = true,
+        stopLoader: () => isLoading.value = false,
+    });
 </script>
 
 <template>
-    <article :class="classes">
-        <header class="lkt-step-process_header" v-if="displayHeader">
-            <h1 class="lkt-step-process_header-title">{{ title }}</h1>
-            <div class="lkt-step-process_header-slot">
-                <slot name="post-title" v-bind:config="config" v-bind:loading="isLoading"/>
-            </div>
-        </header>
+    <article class="lkt-step-process" :class="classes">
+        <lkt-header v-if="header && Object.keys(header).length > 0" v-bind="header" />
+
         <div class="lkt-step-process-buttons">
             <lkt-button
-                :ref="(el:any) => prevButton = el"
+                ref="prevButtonRef"
                 v-show="!isLoading && !prevHidden"
-                v-bind:disabled="prevDisabled"
-                v-bind:confirm-modal="prevConfirm"
-                v-on:click="onPrev">
-                <slot v-if="!!slots['button-prev']" name="button-prev" v-bind:config="config"/>
-                <span v-else>Back</span>
-            </lkt-button>
-
+                v-bind="computedPrevButton"
+                v-on:click="onPrev"
+            />
             <lkt-button
-                :ref="(el:any) => nextButton = el"
+                ref="nextButtonRef"
                 v-show="!isLoading && !nextHidden"
-                v-bind:disabled="nextDisabled"
-                v-bind:confirm-modal="nextConfirm"
-                v-bind:resource="nextResource"
-                v-bind:resource-data="nextResourceData"
-                v-on:click="onNext">
-                <slot v-if="!!slots['button-next']" name="button-next" v-bind:config="config"/>
-                <span v-else>Next</span>
-            </lkt-button>
+                v-bind="computedNextButton"
+                v-on:click="onNext"
+            />
         </div>
 
         <div class="lkt-step-process_content" v-if="!isLoading">
             <div class="lkt-grid-1">
                 <div v-for="step in slotsSteps" v-show="step === currentStep">
-                    <slot :name="'step-'+step" v-bind:config="config"/>
+                    <slot :name="'step-'+step" v-bind:config="stepsHaystack" />
                 </div>
             </div>
         </div>
-        <lkt-loader v-if="isLoading"/>
+        <lkt-loader v-if="isLoading" />
     </article>
 </template>

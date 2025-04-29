@@ -1,4 +1,4 @@
-export { ie as default };
-declare namespace ie {
-    function install(v: any, h?: {}): void;
+export { at as default };
+declare namespace at {
+    function install(e: any, a?: {}): void;
 }
