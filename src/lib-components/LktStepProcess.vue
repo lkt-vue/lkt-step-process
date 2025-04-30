@@ -46,9 +46,6 @@
         prevDisabled = computed(() => {
             return currentStepIndex.value === 0;
         }),
-        nextDisabled = computed(() => {
-            return currentStepIndex.value === (stepsHaystack.value.length - 1);
-        }),
         computedPrevButton = computed(() => {
             let r: ButtonConfig = { ...props.prevButton };
             if (currentStepConfig.value?.prevButton) {
@@ -63,9 +60,6 @@
             let r: ButtonConfig = { ...props.nextButton };
             if (currentStepConfig.value?.nextButton) {
                 r = { ...r, ...currentStepConfig.value?.nextButton };
-            }
-            if (typeof r.disabled === 'undefined') {
-                r.disabled = nextDisabled.value;
             }
             return r;
         }),
@@ -85,7 +79,7 @@
             if (typeof currentStepConfig.value?.nextHidden === 'boolean') {
                 return currentStepConfig.value.nextHidden;
             }
-            return currentStepIndex.value === (stepsHaystack.value.length - 1);
+            return currentStepConfig.value.nextButton === false;
         }),
         classes = computed(() => {
             const r = [];
