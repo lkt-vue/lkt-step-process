@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { computed, ref, useSlots, watch } from 'vue';
+    import { computed, onMounted, ref, useSlots, watch } from 'vue';
     import {
         ButtonConfig,
         getDefaultValues,
@@ -47,8 +47,16 @@
             return currentStepIndex.value === 0;
         }),
         computedPrevButton = computed(() => {
+            if (currentStepConfig.value?.prevButton === false) {
+                return false;
+            }
+
+            if (props.prevButton === false && !currentStepConfig.value?.prevButton) {
+                return false;
+            }
+
             let r: ButtonConfig = { ...props.prevButton };
-            if (currentStepConfig.value?.prevButton) {
+            if (typeof currentStepConfig.value?.prevButton === 'object') {
                 r = { ...r, ...currentStepConfig.value?.prevButton };
             }
             if (typeof r.disabled === 'undefined') {
@@ -57,29 +65,42 @@
             return r;
         }),
         computedNextButton = computed(() => {
+            if (currentStepConfig.value?.nextButton === false) {
+                return false;
+            }
+
+            if (props.nextButton === false && !currentStepConfig.value?.nextButton) {
+                return false;
+            }
+
             let r: ButtonConfig = { ...props.nextButton };
-            if (currentStepConfig.value?.nextButton) {
+            if (typeof currentStepConfig.value?.nextButton === 'object') {
                 r = { ...r, ...currentStepConfig.value?.nextButton };
             }
             return r;
         }),
         prevHidden = computed(() => {
-            if (typeof currentStepConfig.value?.prevHidden === 'function') {
-                return currentStepConfig.value.prevHidden(currentStepConfig.value, stepsHaystack.value);
-            }
-            if (typeof currentStepConfig.value?.prevHidden === 'boolean') {
-                return currentStepConfig.value.prevHidden;
+            if (typeof currentStepConfig.value === 'object'){
+                if (typeof currentStepConfig.value?.prevHidden === 'function') {
+                    return currentStepConfig.value.prevHidden(currentStepConfig.value, stepsHaystack.value);
+                }
+                if (typeof currentStepConfig.value?.prevHidden === 'boolean') {
+                    return currentStepConfig.value.prevHidden;
+                }
             }
             return currentStepIndex.value === 0;
         }),
         nextHidden = computed(() => {
-            if (typeof currentStepConfig.value?.nextHidden === 'function') {
-                return currentStepConfig.value.nextHidden(currentStepConfig.value, stepsHaystack.value);
+            if (typeof currentStepConfig.value === 'object') {
+                if (typeof currentStepConfig.value?.nextHidden === 'function') {
+                    return currentStepConfig.value.nextHidden(currentStepConfig.value, stepsHaystack.value);
+                }
+                if (typeof currentStepConfig.value?.nextHidden === 'boolean') {
+                    return currentStepConfig.value.nextHidden;
+                }
+                return currentStepConfig.value?.nextButton === false;
             }
-            if (typeof currentStepConfig.value?.nextHidden === 'boolean') {
-                return currentStepConfig.value.nextHidden;
-            }
-            return currentStepConfig.value.nextButton === false;
+            return true;
         }),
         classes = computed(() => {
             const r = [];
@@ -114,6 +135,10 @@
         startLoader: () => isLoading.value = true,
         stopLoader: () => isLoading.value = false,
     });
+
+    onMounted(() => {
+        if (!currentStep.value && stepsHaystack.value.length > 0) currentStep.value = stepsHaystack.value[0].key
+    })
 </script>
 
 <template>
@@ -123,12 +148,14 @@
         <div class="lkt-step-process-buttons">
             <lkt-button
                 ref="prevButtonRef"
+                v-if="computedPrevButton"
                 v-show="!isLoading && !prevHidden"
                 v-bind="computedPrevButton"
                 v-on:click="onPrev"
             />
             <lkt-button
                 ref="nextButtonRef"
+                v-if="computedNextButton"
                 v-show="!isLoading && !nextHidden"
                 v-bind="computedNextButton"
                 v-on:click="onNext"
