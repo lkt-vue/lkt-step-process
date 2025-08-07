@@ -3,10 +3,14 @@
     import {
         ButtonConfig,
         getDefaultValues,
+        ItemCrudButtonNavPosition,
+        ItemCrudButtonNavVisibility,
         StepProcess,
         StepProcessConfig,
         StepProcessStepConfig,
     } from 'lkt-vue-kernel';
+    import ButtonNav from '@/components/ButtonNav.vue';
+    import { ButtonNavProps } from '@/config/ButtonNavProps';
 
     const props = withDefaults(defineProps<StepProcessConfig>(), getDefaultValues(StepProcess));
 
@@ -106,6 +110,23 @@
             const r = [];
             if (currentStep.value) r.push(`step-${currentStep.value}`);
             return r.join(' ');
+        }),
+        computedRenderTopButtonNav = computed(() => {
+            if (props.buttonNavVisibility === ItemCrudButtonNavVisibility.Never) return false;
+            return !props.buttonNavPosition || props.buttonNavPosition === ItemCrudButtonNavPosition.Top;
+        }),
+        computedRenderBottomButtonNav = computed(() => {
+            if (props.buttonNavVisibility === ItemCrudButtonNavVisibility.Never) return false;
+            return props.buttonNavPosition === ItemCrudButtonNavPosition.Bottom;
+        }),
+        computedButtonNavProps = computed(() => {
+            return <ButtonNavProps>{
+                isLoading: isLoading.value,
+                prevHidden: prevHidden.value,
+                nextHidden: nextHidden.value,
+                prevButton: computedPrevButton.value,
+                nextButton: computedNextButton.value,
+            };
         });
 
     const onNext = (data: any) => {
@@ -145,22 +166,12 @@
     <article class="lkt-step-process" :class="classes">
         <lkt-header v-if="header && Object.keys(header).length > 0" v-bind="header" />
 
-        <div class="lkt-step-process-buttons">
-            <lkt-button
-                ref="prevButtonRef"
-                v-if="computedPrevButton"
-                v-show="!isLoading && !prevHidden"
-                v-bind="computedPrevButton"
-                v-on:click="onPrev"
-            />
-            <lkt-button
-                ref="nextButtonRef"
-                v-if="computedNextButton"
-                v-show="!isLoading && !nextHidden"
-                v-bind="computedNextButton"
-                v-on:click="onNext"
-            />
-        </div>
+        <button-nav
+            v-if="computedRenderTopButtonNav"
+            v-bind="computedButtonNavProps"
+            @prev="onPrev"
+            @next="onNext"
+        />
 
         <div class="lkt-step-process_content" v-if="!isLoading">
             <div class="lkt-grid-1">
@@ -170,5 +181,12 @@
             </div>
         </div>
         <lkt-loader v-if="isLoading" />
+
+        <button-nav
+            v-if="computedRenderBottomButtonNav"
+            v-bind="computedButtonNavProps"
+            @prev="onPrev"
+            @next="onNext"
+        />
     </article>
 </template>

@@ -1,8 +1,8 @@
-import { ButtonConfig, StepProcessConfig, StepProcessStepConfig } from 'lkt-vue-kernel';
-declare var __VLS_26: string, __VLS_27: {
+import { ButtonConfig, ItemCrudButtonNavPosition, ItemCrudButtonNavVisibility, StepProcessConfig, StepProcessStepConfig } from 'lkt-vue-kernel';
+declare var __VLS_14: string, __VLS_15: {
     config: {
         key: string;
-        nextButton?: {
+        nextButton?: false | {
             type?: import("lkt-vue-kernel").ButtonType | undefined;
             name?: string | undefined;
             value?: string | undefined;
@@ -13,35 +13,92 @@ declare var __VLS_26: string, __VLS_27: {
             containerClass?: string | undefined;
             wrapContent?: boolean | undefined;
             text?: import("lkt-vue-kernel").ValidTextValue;
-            icon?: string | undefined;
-            iconEnd?: string | undefined;
+            icon?: string | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            } | undefined;
+            iconEnd?: string | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            } | undefined;
             img?: string | undefined;
             checked?: boolean | undefined;
             textOn?: import("lkt-vue-kernel").ValidTextValue;
             textOff?: import("lkt-vue-kernel").ValidTextValue;
-            iconOn?: import("lkt-vue-kernel").ValidTextValue;
-            iconOff?: import("lkt-vue-kernel").ValidTextValue;
-            iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-            iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-            dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+            iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            };
+            iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            };
+            iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            };
+            iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            };
+            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
             anchor?: {
                 type?: import("lkt-vue-kernel").AnchorType | undefined;
-                to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                    name?: import("vue-router").RouteRecordNameGeneric;
-                    params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                    path?: undefined | undefined;
-                    query?: import("vue-router").LocationQueryRaw | undefined;
+                to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                    path?: string | undefined;
+                    name?: string | undefined;
                     hash?: string | undefined;
+                    params?: import("lkt-vue-kernel").LktObject | undefined;
+                    query?: import("lkt-vue-kernel").LktObject | undefined;
                     replace?: boolean | undefined;
-                    force?: boolean | undefined;
-                    state?: import("vue-router").HistoryState | undefined;
-                } | {
-                    path: string;
-                    query?: import("vue-router").LocationQueryRaw | undefined;
-                    hash?: string | undefined;
-                    replace?: boolean | undefined;
-                    force?: boolean | undefined;
-                    state?: import("vue-router").HistoryState | undefined;
                 } | undefined;
                 class?: string | undefined;
                 isActive?: boolean | undefined;
@@ -80,17 +137,83 @@ declare var __VLS_26: string, __VLS_27: {
                         containerClass?: string | undefined;
                         wrapContent?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
-                        icon?: string | undefined;
-                        iconEnd?: string | undefined;
+                        icon?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
+                        iconEnd?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
                         img?: string | undefined;
                         checked?: boolean | undefined;
                         textOn?: import("lkt-vue-kernel").ValidTextValue;
                         textOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                        dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                        iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         anchor?: /*elided*/ any | undefined;
                         resource?: string | undefined;
                         resourceData?: import("lkt-vue-kernel").LktObject | undefined;
@@ -157,6 +280,7 @@ declare var __VLS_26: string, __VLS_27: {
                             modelValue?: boolean | undefined;
                             alwaysOpen?: boolean | undefined;
                             class?: string | undefined;
+                            contentClass?: string | undefined;
                             text?: string | undefined;
                             icon?: string | undefined;
                             iconAtEnd?: boolean | undefined;
@@ -171,17 +295,24 @@ declare var __VLS_26: string, __VLS_27: {
                             showOnReferrerHoverDelay?: number | undefined;
                             hideOnReferrerLeave?: boolean | undefined;
                             hideOnReferrerLeaveDelay?: number | undefined;
+                            compensationX?: number | undefined;
+                            compensationY?: number | undefined;
+                            compensateGlobalContainers?: boolean | undefined;
+                            remoteControl?: boolean | undefined;
                         } | undefined;
                         splitIcon?: string | undefined;
                         showTooltipOnHover?: boolean | undefined;
                         showTooltipOnHoverDelay?: number | undefined;
                         hideTooltipOnLeave?: boolean | undefined;
                         splitClass?: string | undefined;
+                        splitButtons?: /*elided*/ any[] | undefined;
                         tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
                             click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpStart?: Function | undefined;
+                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     cancelButton?: {
@@ -195,17 +326,83 @@ declare var __VLS_26: string, __VLS_27: {
                         containerClass?: string | undefined;
                         wrapContent?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
-                        icon?: string | undefined;
-                        iconEnd?: string | undefined;
+                        icon?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
+                        iconEnd?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
                         img?: string | undefined;
                         checked?: boolean | undefined;
                         textOn?: import("lkt-vue-kernel").ValidTextValue;
                         textOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                        dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                        iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         anchor?: /*elided*/ any | undefined;
                         resource?: string | undefined;
                         resourceData?: import("lkt-vue-kernel").LktObject | undefined;
@@ -272,6 +469,7 @@ declare var __VLS_26: string, __VLS_27: {
                             modelValue?: boolean | undefined;
                             alwaysOpen?: boolean | undefined;
                             class?: string | undefined;
+                            contentClass?: string | undefined;
                             text?: string | undefined;
                             icon?: string | undefined;
                             iconAtEnd?: boolean | undefined;
@@ -286,17 +484,24 @@ declare var __VLS_26: string, __VLS_27: {
                             showOnReferrerHoverDelay?: number | undefined;
                             hideOnReferrerLeave?: boolean | undefined;
                             hideOnReferrerLeaveDelay?: number | undefined;
+                            compensationX?: number | undefined;
+                            compensationY?: number | undefined;
+                            compensateGlobalContainers?: boolean | undefined;
+                            remoteControl?: boolean | undefined;
                         } | undefined;
                         splitIcon?: string | undefined;
                         showTooltipOnHover?: boolean | undefined;
                         showTooltipOnHoverDelay?: number | undefined;
                         hideTooltipOnLeave?: boolean | undefined;
                         splitClass?: string | undefined;
+                        splitButtons?: /*elided*/ any[] | undefined;
                         tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
                             click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpStart?: Function | undefined;
+                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     headerActionsButton?: {
@@ -310,17 +515,83 @@ declare var __VLS_26: string, __VLS_27: {
                         containerClass?: string | undefined;
                         wrapContent?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
-                        icon?: string | undefined;
-                        iconEnd?: string | undefined;
+                        icon?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
+                        iconEnd?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
                         img?: string | undefined;
                         checked?: boolean | undefined;
                         textOn?: import("lkt-vue-kernel").ValidTextValue;
                         textOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                        dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                        iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         anchor?: /*elided*/ any | undefined;
                         resource?: string | undefined;
                         resourceData?: import("lkt-vue-kernel").LktObject | undefined;
@@ -387,6 +658,7 @@ declare var __VLS_26: string, __VLS_27: {
                             modelValue?: boolean | undefined;
                             alwaysOpen?: boolean | undefined;
                             class?: string | undefined;
+                            contentClass?: string | undefined;
                             text?: string | undefined;
                             icon?: string | undefined;
                             iconAtEnd?: boolean | undefined;
@@ -401,17 +673,24 @@ declare var __VLS_26: string, __VLS_27: {
                             showOnReferrerHoverDelay?: number | undefined;
                             hideOnReferrerLeave?: boolean | undefined;
                             hideOnReferrerLeaveDelay?: number | undefined;
+                            compensationX?: number | undefined;
+                            compensationY?: number | undefined;
+                            compensateGlobalContainers?: boolean | undefined;
+                            remoteControl?: boolean | undefined;
                         } | undefined;
                         splitIcon?: string | undefined;
                         showTooltipOnHover?: boolean | undefined;
                         showTooltipOnHoverDelay?: number | undefined;
                         hideTooltipOnLeave?: boolean | undefined;
                         splitClass?: string | undefined;
+                        splitButtons?: /*elided*/ any[] | undefined;
                         tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
                             click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpStart?: Function | undefined;
+                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                 } | undefined;
@@ -419,10 +698,12 @@ declare var __VLS_26: string, __VLS_27: {
                 external?: boolean | undefined;
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 icon?: string | {
-                    icon?: import("lkt-vue-kernel").ValidTextValue;
+                    icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                    iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                     text?: import("lkt-vue-kernel").ValidTextValue;
                     class?: import("lkt-vue-kernel").ValidTextValue;
                     type?: import("lkt-vue-kernel").IconType | undefined;
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -469,35 +750,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -533,10 +871,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -567,6 +907,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -581,17 +922,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: {
@@ -605,35 +953,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -669,10 +1074,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -703,6 +1110,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -717,17 +1125,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: {
@@ -741,35 +1156,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -805,10 +1277,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -839,6 +1313,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -853,17 +1328,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -900,35 +1382,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -964,10 +1503,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -998,6 +1539,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -1012,17 +1554,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: {
@@ -1036,35 +1585,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -1100,10 +1706,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -1134,6 +1742,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -1148,17 +1757,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: {
@@ -1172,35 +1788,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -1236,10 +1909,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -1270,6 +1945,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -1284,17 +1960,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -1309,6 +1992,7 @@ declare var __VLS_26: string, __VLS_27: {
                 modelValue?: boolean | undefined;
                 alwaysOpen?: boolean | undefined;
                 class?: string | undefined;
+                contentClass?: string | undefined;
                 text?: string | undefined;
                 icon?: string | undefined;
                 iconAtEnd?: boolean | undefined;
@@ -1323,21 +2007,28 @@ declare var __VLS_26: string, __VLS_27: {
                 showOnReferrerHoverDelay?: number | undefined;
                 hideOnReferrerLeave?: boolean | undefined;
                 hideOnReferrerLeaveDelay?: number | undefined;
+                compensationX?: number | undefined;
+                compensationY?: number | undefined;
+                compensateGlobalContainers?: boolean | undefined;
+                remoteControl?: boolean | undefined;
             } | undefined;
             splitIcon?: string | undefined;
             showTooltipOnHover?: boolean | undefined;
             showTooltipOnHoverDelay?: number | undefined;
             hideTooltipOnLeave?: boolean | undefined;
             splitClass?: string | undefined;
+            splitButtons?: /*elided*/ any[] | undefined;
             tabindex?: import("lkt-vue-kernel").ValidTabIndex;
             prop?: import("lkt-vue-kernel").LktObject | undefined;
             clickRef?: (Element | import("vue").VueElement) | undefined;
             events?: {
                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                httpStart?: Function | undefined;
+                httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
             } | undefined;
         } | undefined;
         nextHidden?: boolean | ((currentStep: StepProcessStepConfig, steps: StepProcessStepConfig[]) => boolean) | undefined;
-        prevButton?: {
+        prevButton?: false | {
             type?: import("lkt-vue-kernel").ButtonType | undefined;
             name?: string | undefined;
             value?: string | undefined;
@@ -1348,35 +2039,92 @@ declare var __VLS_26: string, __VLS_27: {
             containerClass?: string | undefined;
             wrapContent?: boolean | undefined;
             text?: import("lkt-vue-kernel").ValidTextValue;
-            icon?: string | undefined;
-            iconEnd?: string | undefined;
+            icon?: string | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            } | undefined;
+            iconEnd?: string | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            } | undefined;
             img?: string | undefined;
             checked?: boolean | undefined;
             textOn?: import("lkt-vue-kernel").ValidTextValue;
             textOff?: import("lkt-vue-kernel").ValidTextValue;
-            iconOn?: import("lkt-vue-kernel").ValidTextValue;
-            iconOff?: import("lkt-vue-kernel").ValidTextValue;
-            iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-            iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-            dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+            iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            };
+            iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            };
+            iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            };
+            iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                text?: import("lkt-vue-kernel").ValidTextValue;
+                class?: import("lkt-vue-kernel").ValidTextValue;
+                type?: import("lkt-vue-kernel").IconType | undefined;
+                dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                position?: import("lkt-vue-kernel").IconPosition | undefined;
+                events?: {
+                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                } | undefined;
+            };
+            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
             anchor?: {
                 type?: import("lkt-vue-kernel").AnchorType | undefined;
-                to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                    name?: import("vue-router").RouteRecordNameGeneric;
-                    params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                    path?: undefined | undefined;
-                    query?: import("vue-router").LocationQueryRaw | undefined;
+                to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                    path?: string | undefined;
+                    name?: string | undefined;
                     hash?: string | undefined;
+                    params?: import("lkt-vue-kernel").LktObject | undefined;
+                    query?: import("lkt-vue-kernel").LktObject | undefined;
                     replace?: boolean | undefined;
-                    force?: boolean | undefined;
-                    state?: import("vue-router").HistoryState | undefined;
-                } | {
-                    path: string;
-                    query?: import("vue-router").LocationQueryRaw | undefined;
-                    hash?: string | undefined;
-                    replace?: boolean | undefined;
-                    force?: boolean | undefined;
-                    state?: import("vue-router").HistoryState | undefined;
                 } | undefined;
                 class?: string | undefined;
                 isActive?: boolean | undefined;
@@ -1415,17 +2163,83 @@ declare var __VLS_26: string, __VLS_27: {
                         containerClass?: string | undefined;
                         wrapContent?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
-                        icon?: string | undefined;
-                        iconEnd?: string | undefined;
+                        icon?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
+                        iconEnd?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
                         img?: string | undefined;
                         checked?: boolean | undefined;
                         textOn?: import("lkt-vue-kernel").ValidTextValue;
                         textOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                        dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                        iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         anchor?: /*elided*/ any | undefined;
                         resource?: string | undefined;
                         resourceData?: import("lkt-vue-kernel").LktObject | undefined;
@@ -1492,6 +2306,7 @@ declare var __VLS_26: string, __VLS_27: {
                             modelValue?: boolean | undefined;
                             alwaysOpen?: boolean | undefined;
                             class?: string | undefined;
+                            contentClass?: string | undefined;
                             text?: string | undefined;
                             icon?: string | undefined;
                             iconAtEnd?: boolean | undefined;
@@ -1506,17 +2321,24 @@ declare var __VLS_26: string, __VLS_27: {
                             showOnReferrerHoverDelay?: number | undefined;
                             hideOnReferrerLeave?: boolean | undefined;
                             hideOnReferrerLeaveDelay?: number | undefined;
+                            compensationX?: number | undefined;
+                            compensationY?: number | undefined;
+                            compensateGlobalContainers?: boolean | undefined;
+                            remoteControl?: boolean | undefined;
                         } | undefined;
                         splitIcon?: string | undefined;
                         showTooltipOnHover?: boolean | undefined;
                         showTooltipOnHoverDelay?: number | undefined;
                         hideTooltipOnLeave?: boolean | undefined;
                         splitClass?: string | undefined;
+                        splitButtons?: /*elided*/ any[] | undefined;
                         tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
                             click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpStart?: Function | undefined;
+                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     cancelButton?: {
@@ -1530,17 +2352,83 @@ declare var __VLS_26: string, __VLS_27: {
                         containerClass?: string | undefined;
                         wrapContent?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
-                        icon?: string | undefined;
-                        iconEnd?: string | undefined;
+                        icon?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
+                        iconEnd?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
                         img?: string | undefined;
                         checked?: boolean | undefined;
                         textOn?: import("lkt-vue-kernel").ValidTextValue;
                         textOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                        dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                        iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         anchor?: /*elided*/ any | undefined;
                         resource?: string | undefined;
                         resourceData?: import("lkt-vue-kernel").LktObject | undefined;
@@ -1607,6 +2495,7 @@ declare var __VLS_26: string, __VLS_27: {
                             modelValue?: boolean | undefined;
                             alwaysOpen?: boolean | undefined;
                             class?: string | undefined;
+                            contentClass?: string | undefined;
                             text?: string | undefined;
                             icon?: string | undefined;
                             iconAtEnd?: boolean | undefined;
@@ -1621,17 +2510,24 @@ declare var __VLS_26: string, __VLS_27: {
                             showOnReferrerHoverDelay?: number | undefined;
                             hideOnReferrerLeave?: boolean | undefined;
                             hideOnReferrerLeaveDelay?: number | undefined;
+                            compensationX?: number | undefined;
+                            compensationY?: number | undefined;
+                            compensateGlobalContainers?: boolean | undefined;
+                            remoteControl?: boolean | undefined;
                         } | undefined;
                         splitIcon?: string | undefined;
                         showTooltipOnHover?: boolean | undefined;
                         showTooltipOnHoverDelay?: number | undefined;
                         hideTooltipOnLeave?: boolean | undefined;
                         splitClass?: string | undefined;
+                        splitButtons?: /*elided*/ any[] | undefined;
                         tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
                             click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpStart?: Function | undefined;
+                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     headerActionsButton?: {
@@ -1645,17 +2541,83 @@ declare var __VLS_26: string, __VLS_27: {
                         containerClass?: string | undefined;
                         wrapContent?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
-                        icon?: string | undefined;
-                        iconEnd?: string | undefined;
+                        icon?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
+                        iconEnd?: string | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        } | undefined;
                         img?: string | undefined;
                         checked?: boolean | undefined;
                         textOn?: import("lkt-vue-kernel").ValidTextValue;
                         textOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                        dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                        iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            text?: import("lkt-vue-kernel").ValidTextValue;
+                            class?: import("lkt-vue-kernel").ValidTextValue;
+                            type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                            position?: import("lkt-vue-kernel").IconPosition | undefined;
+                            events?: {
+                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            } | undefined;
+                        };
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         anchor?: /*elided*/ any | undefined;
                         resource?: string | undefined;
                         resourceData?: import("lkt-vue-kernel").LktObject | undefined;
@@ -1722,6 +2684,7 @@ declare var __VLS_26: string, __VLS_27: {
                             modelValue?: boolean | undefined;
                             alwaysOpen?: boolean | undefined;
                             class?: string | undefined;
+                            contentClass?: string | undefined;
                             text?: string | undefined;
                             icon?: string | undefined;
                             iconAtEnd?: boolean | undefined;
@@ -1736,17 +2699,24 @@ declare var __VLS_26: string, __VLS_27: {
                             showOnReferrerHoverDelay?: number | undefined;
                             hideOnReferrerLeave?: boolean | undefined;
                             hideOnReferrerLeaveDelay?: number | undefined;
+                            compensationX?: number | undefined;
+                            compensationY?: number | undefined;
+                            compensateGlobalContainers?: boolean | undefined;
+                            remoteControl?: boolean | undefined;
                         } | undefined;
                         splitIcon?: string | undefined;
                         showTooltipOnHover?: boolean | undefined;
                         showTooltipOnHoverDelay?: number | undefined;
                         hideTooltipOnLeave?: boolean | undefined;
                         splitClass?: string | undefined;
+                        splitButtons?: /*elided*/ any[] | undefined;
                         tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
                             click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpStart?: Function | undefined;
+                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                 } | undefined;
@@ -1754,10 +2724,12 @@ declare var __VLS_26: string, __VLS_27: {
                 external?: boolean | undefined;
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 icon?: string | {
-                    icon?: import("lkt-vue-kernel").ValidTextValue;
+                    icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                    iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                     text?: import("lkt-vue-kernel").ValidTextValue;
                     class?: import("lkt-vue-kernel").ValidTextValue;
                     type?: import("lkt-vue-kernel").IconType | undefined;
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -1804,35 +2776,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -1868,10 +2897,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -1902,6 +2933,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -1916,17 +2948,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: {
@@ -1940,35 +2979,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -2004,10 +3100,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -2038,6 +3136,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -2052,17 +3151,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: {
@@ -2076,35 +3182,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -2140,10 +3303,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -2174,6 +3339,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -2188,17 +3354,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -2235,35 +3408,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -2299,10 +3529,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -2333,6 +3565,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -2347,17 +3580,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: {
@@ -2371,35 +3611,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -2435,10 +3732,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -2469,6 +3768,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -2483,17 +3783,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: {
@@ -2507,35 +3814,92 @@ declare var __VLS_26: string, __VLS_27: {
                     containerClass?: string | undefined;
                     wrapContent?: boolean | undefined;
                     text?: import("lkt-vue-kernel").ValidTextValue;
-                    icon?: string | undefined;
-                    iconEnd?: string | undefined;
+                    icon?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
+                    iconEnd?: string | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    } | undefined;
                     img?: string | undefined;
                     checked?: boolean | undefined;
                     textOn?: import("lkt-vue-kernel").ValidTextValue;
                     textOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconOff?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue;
-                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue;
-                    dot?: import("lkt-vue-kernel").ValidButtonDot | undefined;
+                    iconOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
+                        icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                        text?: import("lkt-vue-kernel").ValidTextValue;
+                        class?: import("lkt-vue-kernel").ValidTextValue;
+                        type?: import("lkt-vue-kernel").IconType | undefined;
+                        dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
+                        position?: import("lkt-vue-kernel").IconPosition | undefined;
+                        events?: {
+                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        } | undefined;
+                    };
+                    dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     anchor?: {
                         type?: import("lkt-vue-kernel").AnchorType | undefined;
-                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("vue-router").RouteLocationRaw | string) | {
-                            name?: import("vue-router").RouteRecordNameGeneric;
-                            params?: import("vue-router").RouteParamsRawGeneric | undefined;
-                            path?: undefined | undefined;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
+                        to?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
                             hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
                             replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
-                        } | {
-                            path: string;
-                            query?: import("vue-router").LocationQueryRaw | undefined;
-                            hash?: string | undefined;
-                            replace?: boolean | undefined;
-                            force?: boolean | undefined;
-                            state?: import("vue-router").HistoryState | undefined;
                         } | undefined;
                         class?: string | undefined;
                         isActive?: boolean | undefined;
@@ -2571,10 +3935,12 @@ declare var __VLS_26: string, __VLS_27: {
                         external?: boolean | undefined;
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         icon?: string | {
-                            icon?: import("lkt-vue-kernel").ValidTextValue;
+                            icon?: import("lkt-vue-kernel").ValidTextValue | (() => string);
+                            iconText?: import("lkt-vue-kernel").ValidTextValue | (() => string);
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
                                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
@@ -2605,6 +3971,7 @@ declare var __VLS_26: string, __VLS_27: {
                         modelValue?: boolean | undefined;
                         alwaysOpen?: boolean | undefined;
                         class?: string | undefined;
+                        contentClass?: string | undefined;
                         text?: string | undefined;
                         icon?: string | undefined;
                         iconAtEnd?: boolean | undefined;
@@ -2619,17 +3986,24 @@ declare var __VLS_26: string, __VLS_27: {
                         showOnReferrerHoverDelay?: number | undefined;
                         hideOnReferrerLeave?: boolean | undefined;
                         hideOnReferrerLeaveDelay?: number | undefined;
+                        compensationX?: number | undefined;
+                        compensationY?: number | undefined;
+                        compensateGlobalContainers?: boolean | undefined;
+                        remoteControl?: boolean | undefined;
                     } | undefined;
                     splitIcon?: string | undefined;
                     showTooltipOnHover?: boolean | undefined;
                     showTooltipOnHoverDelay?: number | undefined;
                     hideTooltipOnLeave?: boolean | undefined;
                     splitClass?: string | undefined;
+                    splitButtons?: /*elided*/ any[] | undefined;
                     tabindex?: import("lkt-vue-kernel").ValidTabIndex;
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
                         click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpStart?: Function | undefined;
+                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -2644,6 +4018,7 @@ declare var __VLS_26: string, __VLS_27: {
                 modelValue?: boolean | undefined;
                 alwaysOpen?: boolean | undefined;
                 class?: string | undefined;
+                contentClass?: string | undefined;
                 text?: string | undefined;
                 icon?: string | undefined;
                 iconAtEnd?: boolean | undefined;
@@ -2658,24 +4033,31 @@ declare var __VLS_26: string, __VLS_27: {
                 showOnReferrerHoverDelay?: number | undefined;
                 hideOnReferrerLeave?: boolean | undefined;
                 hideOnReferrerLeaveDelay?: number | undefined;
+                compensationX?: number | undefined;
+                compensationY?: number | undefined;
+                compensateGlobalContainers?: boolean | undefined;
+                remoteControl?: boolean | undefined;
             } | undefined;
             splitIcon?: string | undefined;
             showTooltipOnHover?: boolean | undefined;
             showTooltipOnHoverDelay?: number | undefined;
             hideTooltipOnLeave?: boolean | undefined;
             splitClass?: string | undefined;
+            splitButtons?: /*elided*/ any[] | undefined;
             tabindex?: import("lkt-vue-kernel").ValidTabIndex;
             prop?: import("lkt-vue-kernel").LktObject | undefined;
             clickRef?: (Element | import("vue").VueElement) | undefined;
             events?: {
                 click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                httpStart?: Function | undefined;
+                httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
             } | undefined;
         } | undefined;
         prevHidden?: boolean | ((currentStep: StepProcessStepConfig, steps: StepProcessStepConfig[]) => boolean) | undefined;
     }[];
 };
 type __VLS_Slots = {} & {
-    [K in NonNullable<typeof __VLS_26>]?: (props: typeof __VLS_27) => any;
+    [K in NonNullable<typeof __VLS_14>]?: (props: typeof __VLS_15) => any;
 };
 declare const __VLS_component: import("vue").DefineComponent<StepProcessConfig, {
     goNext: () => void;
@@ -2698,6 +4080,8 @@ declare const __VLS_component: import("vue").DefineComponent<StepProcessConfig, 
     loading: boolean;
     header: import("lkt-vue-kernel").HeaderConfig;
     modelValue: string | number;
+    buttonNavPosition: ItemCrudButtonNavPosition;
+    buttonNavVisibility: ItemCrudButtonNavVisibility;
     steps: Array<StepProcessStepConfig>;
     nextButton: ButtonConfig;
     prevButton: ButtonConfig;
