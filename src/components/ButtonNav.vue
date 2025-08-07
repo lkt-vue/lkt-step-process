@@ -16,20 +16,27 @@
         <lkt-button
             ref="prevButtonRef"
             v-if="prevButton"
-            v-show="!isLoading && !prevHidden"
+            v-show="!isLoading"
             v-bind="prevButton"
             @click="emit('prev')"
         />
 
-        <template v-if="slots['between-buttons-ever']" v-show="!isLoading">
-            <slot name="between-buttons-ever"/>
+        <template v-if="slots['between-buttons-ever']">
+            <slot
+                name="between-buttons-ever"
+                v-bind="{
+                    currentStep,
+                    currentStepIndex,
+                    amountOfSteps,
+                }"
+            />
         </template>
 
 
         <lkt-button
             ref="nextButtonRef"
             v-if="nextButton"
-            v-show="!isLoading && !nextHidden"
+            v-show="!isLoading"
             v-bind="nextButton"
             @click="emit('next')"
         />

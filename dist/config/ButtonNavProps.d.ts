@@ -3,6 +3,7 @@ export interface ButtonNavProps {
     prevButton: ButtonConfig | false;
     nextButton: ButtonConfig | false;
     isLoading: boolean;
-    prevHidden: boolean;
-    nextHidden: boolean;
+    currentStep: string;
+    currentStepIndex: number;
+    amountOfSteps: number;
 }

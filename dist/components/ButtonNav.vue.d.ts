@@ -1,5 +1,9 @@
 import { ButtonNavProps } from '../config/ButtonNavProps';
-declare var __VLS_11: {};
+declare var __VLS_11: {
+    currentStep: string;
+    currentStepIndex: number;
+    amountOfSteps: number;
+};
 type __VLS_Slots = {} & {
     'between-buttons-ever'?: (props: typeof __VLS_11) => any;
 };

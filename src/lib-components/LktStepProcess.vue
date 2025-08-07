@@ -59,6 +59,11 @@
                 return false;
             }
 
+            if (typeof currentStepConfig.value === 'object'){
+                if (typeof currentStepConfig.value?.prevHidden === 'function' && currentStepConfig.value.prevHidden(currentStepConfig.value, stepsHaystack.value)) return false;
+                if (typeof currentStepConfig.value?.prevHidden === 'boolean' && currentStepConfig.value?.prevHidden === true) return false;
+            }
+
             let r: ButtonConfig = { ...props.prevButton };
             if (typeof currentStepConfig.value?.prevButton === 'object') {
                 r = { ...r, ...currentStepConfig.value?.prevButton };
@@ -77,34 +82,16 @@
                 return false;
             }
 
+            if (typeof currentStepConfig.value === 'object'){
+                if (typeof currentStepConfig.value?.nextHidden === 'function' && currentStepConfig.value.nextHidden(currentStepConfig.value, stepsHaystack.value)) return false;
+                if (typeof currentStepConfig.value?.nextHidden === 'boolean' && currentStepConfig.value?.nextHidden === true) return false;
+            }
+
             let r: ButtonConfig = { ...props.nextButton };
             if (typeof currentStepConfig.value?.nextButton === 'object') {
                 r = { ...r, ...currentStepConfig.value?.nextButton };
             }
             return r;
-        }),
-        prevHidden = computed(() => {
-            if (typeof currentStepConfig.value === 'object'){
-                if (typeof currentStepConfig.value?.prevHidden === 'function') {
-                    return currentStepConfig.value.prevHidden(currentStepConfig.value, stepsHaystack.value);
-                }
-                if (typeof currentStepConfig.value?.prevHidden === 'boolean') {
-                    return currentStepConfig.value.prevHidden;
-                }
-            }
-            return currentStepIndex.value === 0;
-        }),
-        nextHidden = computed(() => {
-            if (typeof currentStepConfig.value === 'object') {
-                if (typeof currentStepConfig.value?.nextHidden === 'function') {
-                    return currentStepConfig.value.nextHidden(currentStepConfig.value, stepsHaystack.value);
-                }
-                if (typeof currentStepConfig.value?.nextHidden === 'boolean') {
-                    return currentStepConfig.value.nextHidden;
-                }
-                return currentStepConfig.value?.nextButton === false;
-            }
-            return true;
         }),
         classes = computed(() => {
             const r = [];
@@ -122,11 +109,14 @@
         computedButtonNavProps = computed(() => {
             return <ButtonNavProps>{
                 isLoading: isLoading.value,
-                prevHidden: prevHidden.value,
-                nextHidden: nextHidden.value,
                 prevButton: computedPrevButton.value,
                 nextButton: computedNextButton.value,
+                currentStep: currentStep.value,
+                currentStepIndex: currentStepIndex.value,
             };
+        }),
+        computedAmountOfSteps = computed(() => {
+            return stepsHaystack.value.length;
         });
 
     const onNext = (data: any) => {
@@ -172,8 +162,15 @@
             @prev="onPrev"
             @next="onNext"
         >
-            <template #between-buttons-ever="{}" v-if="slots['between-buttons-ever']">
-                <slot name="between-buttons-ever"/>
+            <template #between-buttons-ever="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['between-buttons-ever']">
+                <slot
+                    name="between-buttons-ever"
+                      v-bind="{
+                        currentStep,
+                        currentStepIndex,
+                        amountOfSteps: computedAmountOfSteps,
+                    }"
+                />
             </template>
         </button-nav>
 
@@ -192,8 +189,15 @@
             @prev="onPrev"
             @next="onNext"
         >
-            <template #between-buttons-ever="{}" v-if="slots['between-buttons-ever']">
-                <slot name="between-buttons-ever"/>
+            <template #between-buttons-ever="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['between-buttons-ever']">
+                <slot
+                    name="between-buttons-ever"
+                    v-bind="{
+                        currentStep,
+                        currentStepIndex,
+                        amountOfSteps: computedAmountOfSteps,
+                    }"
+                />
             </template>
         </button-nav>
     </article>
