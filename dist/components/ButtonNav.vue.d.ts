@@ -1,9 +1,19 @@
 import { ButtonNavProps } from '../config/ButtonNavProps';
-declare const _default: import("vue").DefineComponent<ButtonNavProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+declare var __VLS_11: {};
+type __VLS_Slots = {} & {
+    'between-buttons-ever'?: (props: typeof __VLS_11) => any;
+};
+declare const __VLS_component: import("vue").DefineComponent<ButtonNavProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     next: (...args: any[]) => void;
     prev: (...args: any[]) => void;
 }, string, import("vue").PublicProps, Readonly<ButtonNavProps> & Readonly<{
     onNext?: ((...args: any[]) => any) | undefined;
     onPrev?: ((...args: any[]) => any) | undefined;
 }>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
 export default _default;
+type __VLS_WithSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};

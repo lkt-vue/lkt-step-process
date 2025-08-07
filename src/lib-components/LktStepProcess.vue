@@ -171,7 +171,11 @@
             v-bind="computedButtonNavProps"
             @prev="onPrev"
             @next="onNext"
-        />
+        >
+            <template #between-buttons-ever="{}" v-if="slots['between-buttons-ever']">
+                <slot name="between-buttons-ever"/>
+            </template>
+        </button-nav>
 
         <div class="lkt-step-process_content" v-if="!isLoading">
             <div class="lkt-grid-1">
@@ -187,6 +191,10 @@
             v-bind="computedButtonNavProps"
             @prev="onPrev"
             @next="onNext"
-        />
+        >
+            <template #between-buttons-ever="{}" v-if="slots['between-buttons-ever']">
+                <slot name="between-buttons-ever"/>
+            </template>
+        </button-nav>
     </article>
 </template>
