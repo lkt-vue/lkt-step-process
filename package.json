@@ -1,6 +1,6 @@
 {
   "name": "lkt-step-process",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "",
   "type": "module",
   "module": "./dist/build.js",
@@ -8,7 +8,9 @@
     ".": {
       "import": "./dist/build.js"
     },
-    "./styles": "./dist/build.css"
+    "./styles": "./dist/build.css",
+    "./theme": "./theme/default.css",
+    "./theme/default": "./theme/default.css"
   },
   "types": "./dist/index.d.ts",
   "files": ["dist/*", "src/**/*.vue"],

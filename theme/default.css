@@ -1,0 +1,5 @@
+.lkt-step-process {
+    --lkt-step-process--gap: 15px;
+    --lkt-step-process--buttons--gap: 15px;
+    --lkt-step-process--buttons--padding: 15px;
+}
