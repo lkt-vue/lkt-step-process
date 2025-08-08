@@ -1,5 +1,16 @@
 .lkt-step-process {
-    --lkt-step-process--gap: 15px;
-    --lkt-step-process--buttons--gap: 15px;
-    --lkt-step-process--buttons--padding: 15px;
+    --lkt-step-process--gap: 0;
+
+    /** Element: Content */
+    --lkt-step-process--content--gap: 0;
+
+    /** Element: Nav */
+    --lkt-step-process--nav--background: #ffffff;
+    --lkt-step-process--nav--gap: 0;
+    --lkt-step-process--nav--padding: 0;
+    --lkt-step-process--nav--font-size: 14px;
+    --lkt-step-process--nav--line-height: 1.425;
+
+    /** Element: Dots */
+    --lkt-step-process--dots--gap: 5px;
 }

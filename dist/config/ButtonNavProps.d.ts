@@ -6,4 +6,6 @@ export interface ButtonNavProps {
     currentStep: string;
     currentStepIndex: number;
     amountOfSteps: number;
+    dots: boolean;
+    dotsNumbers: boolean;
 }

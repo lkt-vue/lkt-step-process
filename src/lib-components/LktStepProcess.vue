@@ -27,8 +27,7 @@
     const isLoading = ref(props.loading),
         currentStep = ref(props.modelValue),
         stepsHaystack = ref(props.steps),
-        prevButtonRef = ref(null),
-        nextButtonRef = ref(null);
+        navRef = ref(null);
 
     watch(() => props.loading, (value) => isLoading.value = value);
     watch(() => props.modelValue, (value) => currentStep.value = value);
@@ -106,6 +105,9 @@
             if (props.buttonNavVisibility === ItemCrudButtonNavVisibility.Never) return false;
             return props.buttonNavPosition === ItemCrudButtonNavPosition.Bottom;
         }),
+        computedAmountOfSteps = computed(() => {
+            return stepsHaystack.value.length;
+        }),
         computedButtonNavProps = computed(() => {
             return <ButtonNavProps>{
                 isLoading: isLoading.value,
@@ -113,10 +115,10 @@
                 nextButton: computedNextButton.value,
                 currentStep: currentStep.value,
                 currentStepIndex: currentStepIndex.value,
+                amountOfSteps: computedAmountOfSteps.value,
+                dots: props.dots,
+                dotsNumbers: props.dotsNumbers,
             };
-        }),
-        computedAmountOfSteps = computed(() => {
-            return stepsHaystack.value.length;
         });
 
     const onNext = (data: any) => {
@@ -137,11 +139,11 @@
     defineExpose({
         goNext: () => {
             // @ts-ignore
-            nextButtonRef.value.click();
+            navRef.value.click();
         },
         goPrev: () => {
             // @ts-ignore
-            prevButtonRef.value.click();
+            navRef.value.click();
         },
         startLoader: () => isLoading.value = true,
         stopLoader: () => isLoading.value = false,
@@ -162,9 +164,9 @@
             @prev="onPrev"
             @next="onNext"
         >
-            <template #between-buttons-ever="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['between-buttons-ever']">
+            <template #nav-info="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['nav-info']">
                 <slot
-                    name="between-buttons-ever"
+                    name="nav-info"
                       v-bind="{
                         currentStep,
                         currentStepIndex,
@@ -174,7 +176,7 @@
             </template>
         </button-nav>
 
-        <div class="lkt-step-process_content" v-if="!isLoading">
+        <div class="lkt-step-process--content" v-if="!isLoading">
             <div class="lkt-grid-1">
                 <div v-for="step in slotsSteps" v-show="step === currentStep">
                     <slot :name="'step-'+step" v-bind:config="stepsHaystack" />
@@ -189,9 +191,9 @@
             @prev="onPrev"
             @next="onNext"
         >
-            <template #between-buttons-ever="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['between-buttons-ever']">
+            <template #nav-info="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['nav-info']">
                 <slot
-                    name="between-buttons-ever"
+                    name="nav-info"
                     v-bind="{
                         currentStep,
                         currentStepIndex,

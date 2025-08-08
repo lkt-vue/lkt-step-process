@@ -5,9 +5,12 @@ declare var __VLS_11: {
     amountOfSteps: number;
 };
 type __VLS_Slots = {} & {
-    'between-buttons-ever'?: (props: typeof __VLS_11) => any;
+    'nav-info'?: (props: typeof __VLS_11) => any;
 };
-declare const __VLS_component: import("vue").DefineComponent<ButtonNavProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+declare const __VLS_component: import("vue").DefineComponent<ButtonNavProps, {
+    goNext: () => void;
+    goPrev: () => void;
+}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     next: (...args: any[]) => void;
     prev: (...args: any[]) => void;
 }, string, import("vue").PublicProps, Readonly<ButtonNavProps> & Readonly<{
