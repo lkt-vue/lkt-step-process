@@ -3,6 +3,7 @@
 
     /** Element: Content */
     --lkt-step-process--content--gap: 0;
+    --lkt-step-process--content--padding: 0;
 
     /** Element: Nav */
     --lkt-step-process--nav--background: #ffffff;
