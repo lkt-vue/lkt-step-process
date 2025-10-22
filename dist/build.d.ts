@@ -1,4 +1,4 @@
-export { ht as default };
-declare namespace ht {
+export { xt as default };
+declare namespace xt {
     function install(e: any, a?: {}): void;
 }

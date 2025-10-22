@@ -178,9 +178,11 @@
 
         <div class="lkt-step-process--content" v-if="!isLoading">
             <div class="lkt-grid-1">
-                <div v-for="step in slotsSteps" v-show="step === currentStep">
-                    <slot :name="'step-'+step" v-bind:config="stepsHaystack" />
-                </div>
+                <template v-for="step in slotsSteps">
+                    <div v-if="step === currentStep">
+                        <slot :name="'step-'+step" v-bind:config="stepsHaystack" />
+                    </div>
+                </template>
             </div>
         </div>
         <lkt-loader v-if="isLoading" />
