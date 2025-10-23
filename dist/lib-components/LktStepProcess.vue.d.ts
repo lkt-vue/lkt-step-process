@@ -1,9 +1,9 @@
 import { ButtonConfig, ItemCrudButtonNavPosition, ItemCrudButtonNavVisibility, StepProcessConfig, StepProcessStepConfig } from 'lkt-vue-kernel';
-declare var __VLS_13: {
+declare var __VLS_15: {
     currentStep: any;
     currentStepIndex: any;
     amountOfSteps: number;
-}, __VLS_16: string, __VLS_17: {
+}, __VLS_18: string, __VLS_19: {
     config: {
         key: string;
         nextButton?: false | {
@@ -4059,17 +4059,17 @@ declare var __VLS_13: {
         } | undefined;
         prevHidden?: boolean | ((currentStep: StepProcessStepConfig, steps: StepProcessStepConfig[]) => boolean) | undefined;
     }[];
-}, __VLS_31: {
+}, __VLS_35: {
     currentStep: any;
     currentStepIndex: any;
     amountOfSteps: number;
 };
 type __VLS_Slots = {} & {
-    [K in NonNullable<typeof __VLS_16>]?: (props: typeof __VLS_17) => any;
+    [K in NonNullable<typeof __VLS_18>]?: (props: typeof __VLS_19) => any;
 } & {
-    'nav-info'?: (props: typeof __VLS_13) => any;
+    'nav-info'?: (props: typeof __VLS_15) => any;
 } & {
-    'nav-info'?: (props: typeof __VLS_31) => any;
+    'nav-info'?: (props: typeof __VLS_35) => any;
 };
 declare const __VLS_component: import("vue").DefineComponent<StepProcessConfig, {
     goNext: () => void;

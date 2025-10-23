@@ -139,11 +139,11 @@
     defineExpose({
         goNext: () => {
             // @ts-ignore
-            navRef.value.click();
+            navRef.value.goNext();
         },
         goPrev: () => {
             // @ts-ignore
-            navRef.value.click();
+            navRef.value.goPrev();
         },
         startLoader: () => isLoading.value = true,
         stopLoader: () => isLoading.value = false,
@@ -160,6 +160,7 @@
 
         <button-nav
             v-if="computedRenderTopButtonNav"
+            ref="navRef"
             v-bind="computedButtonNavProps"
             @prev="onPrev"
             @next="onNext"
@@ -189,6 +190,7 @@
 
         <button-nav
             v-if="computedRenderBottomButtonNav"
+            ref="navRef"
             v-bind="computedButtonNavProps"
             @prev="onPrev"
             @next="onNext"
