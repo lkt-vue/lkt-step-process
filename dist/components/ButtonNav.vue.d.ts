@@ -1,11 +1,11 @@
 import { ButtonNavProps } from '../config/ButtonNavProps';
-declare var __VLS_11: {
+declare var __VLS_7: {
     currentStep: string;
     currentStepIndex: number;
     amountOfSteps: number;
 };
 type __VLS_Slots = {} & {
-    'nav-info'?: (props: typeof __VLS_11) => any;
+    'nav-info'?: (props: typeof __VLS_7) => any;
 };
 declare const __VLS_component: import("vue").DefineComponent<ButtonNavProps, {
     goNext: () => void;

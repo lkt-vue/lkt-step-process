@@ -1,6 +1,6 @@
 {
   "name": "lkt-step-process",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "",
   "type": "module",
   "module": "./dist/build.js",
@@ -13,7 +13,10 @@
     "./theme/default": "./theme/default.css"
   },
   "types": "./dist/index.d.ts",
-  "files": ["dist/*", "src/**/*.vue"],
+  "files": [
+    "dist/*",
+    "src/**/*.vue"
+  ],
   "license": "MIT",
   "sideEffects": false,
   "scripts": {

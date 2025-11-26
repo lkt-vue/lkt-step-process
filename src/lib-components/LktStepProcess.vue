@@ -1,7 +1,7 @@
 <script setup lang="ts">
     import { computed, onMounted, ref, useSlots, watch } from 'vue';
     import {
-        ButtonConfig,
+        ButtonConfig, ClickEventArgs,
         getDefaultValues,
         ItemCrudButtonNavPosition,
         ItemCrudButtonNavVisibility,
@@ -70,7 +70,24 @@
             if (typeof r.disabled === 'undefined') {
                 r.disabled = prevDisabled.value;
             }
-            return r;
+
+            const clientClickEvent = r.events?.click;
+
+            return {
+                ...r,
+                events: {
+                    ...r.events,
+                    click: (data: ClickEventArgs) => {
+
+                        if (typeof clientClickEvent === 'function') clientClickEvent(data);
+
+                        if (data.httpResponse?.success === false) {
+                            return;
+                        }
+                        onPrev(data);
+                    }
+                }
+            };
         }),
         computedNextButton = computed(() => {
             if (currentStepConfig.value?.nextButton === false) {
@@ -90,7 +107,24 @@
             if (typeof currentStepConfig.value?.nextButton === 'object') {
                 r = { ...r, ...currentStepConfig.value?.nextButton };
             }
-            return r;
+
+            const clientClickEvent = r.events?.click;
+
+            return {
+                ...r,
+                events: {
+                    ...r.events,
+                    click: (data: ClickEventArgs) => {
+
+                        if (typeof clientClickEvent === 'function') clientClickEvent(data);
+
+                        if (data.httpResponse?.success === false) {
+                            return;
+                        }
+                        onNext(data);
+                    }
+                }
+            };
         }),
         classes = computed(() => {
             const r = [];
@@ -119,6 +153,12 @@
                 dots: props.dots,
                 dotsNumbers: props.dotsNumbers,
             };
+        }),
+        computedHasButtonNavContent =  computed(() => {
+            return typeof computedPrevButton.value === 'object'
+                || typeof computedNextButton.value === 'object'
+                || props.dots
+                || typeof slots['nav-info'] !== 'undefined';
         });
 
     const onNext = (data: any) => {
@@ -159,11 +199,9 @@
         <lkt-header v-if="header && Object.keys(header).length > 0" v-bind="header" />
 
         <button-nav
-            v-if="computedRenderTopButtonNav"
+            v-if="computedRenderTopButtonNav && computedHasButtonNavContent"
             ref="navRef"
             v-bind="computedButtonNavProps"
-            @prev="onPrev"
-            @next="onNext"
         >
             <template #nav-info="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['nav-info']">
                 <slot
@@ -189,11 +227,9 @@
         <lkt-loader v-if="isLoading" />
 
         <button-nav
-            v-if="computedRenderBottomButtonNav"
+            v-if="computedRenderBottomButtonNav && computedHasButtonNavContent"
             ref="navRef"
             v-bind="computedButtonNavProps"
-            @prev="onPrev"
-            @next="onNext"
         >
             <template #nav-info="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['nav-info']">
                 <slot

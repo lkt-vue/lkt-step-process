@@ -1,9 +1,9 @@
-import { ButtonConfig, ItemCrudButtonNavPosition, ItemCrudButtonNavVisibility, StepProcessConfig, StepProcessStepConfig } from 'lkt-vue-kernel';
-declare var __VLS_15: {
+import { ButtonConfig, ClickEventArgs, ItemCrudButtonNavPosition, ItemCrudButtonNavVisibility, StepProcessConfig, StepProcessStepConfig } from 'lkt-vue-kernel';
+declare var __VLS_10: {
     currentStep: any;
     currentStepIndex: any;
     amountOfSteps: number;
-}, __VLS_18: string, __VLS_19: {
+}, __VLS_13: string, __VLS_14: {
     config: {
         key: string;
         nextButton?: false | {
@@ -26,7 +26,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             } | undefined;
             iconEnd?: string | {
@@ -38,7 +38,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             } | undefined;
             img?: string | undefined;
@@ -54,7 +54,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             };
             iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -66,7 +66,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             };
             iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -78,7 +78,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             };
             iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -90,7 +90,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             };
             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -150,7 +150,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         iconEnd?: string | {
@@ -162,7 +162,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         img?: string | undefined;
@@ -178,7 +178,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -190,7 +190,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -202,7 +202,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -214,7 +214,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -314,9 +314,9 @@ declare var __VLS_15: {
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             httpStart?: Function | undefined;
-                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     cancelButton?: {
@@ -339,7 +339,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         iconEnd?: string | {
@@ -351,7 +351,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         img?: string | undefined;
@@ -367,7 +367,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -379,7 +379,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -391,7 +391,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -403,7 +403,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -503,9 +503,9 @@ declare var __VLS_15: {
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             httpStart?: Function | undefined;
-                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     headerActionsButton?: {
@@ -528,7 +528,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         iconEnd?: string | {
@@ -540,7 +540,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         img?: string | undefined;
@@ -556,7 +556,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -568,7 +568,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -580,7 +580,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -592,7 +592,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -692,9 +692,9 @@ declare var __VLS_15: {
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             httpStart?: Function | undefined;
-                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                 } | undefined;
@@ -710,11 +710,11 @@ declare var __VLS_15: {
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
                 prop?: import("lkt-vue-kernel").LktObject | undefined;
                 onClick?: Function | undefined;
@@ -763,7 +763,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -775,7 +775,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -791,7 +791,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -803,7 +803,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -815,7 +815,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -827,7 +827,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -883,11 +883,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -941,9 +941,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: {
@@ -966,7 +966,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -978,7 +978,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -994,7 +994,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1006,7 +1006,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1018,7 +1018,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1030,7 +1030,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -1086,11 +1086,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -1144,9 +1144,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: {
@@ -1169,7 +1169,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -1181,7 +1181,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -1197,7 +1197,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1209,7 +1209,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1221,7 +1221,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1233,7 +1233,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -1289,11 +1289,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -1347,9 +1347,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -1395,7 +1395,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -1407,7 +1407,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -1423,7 +1423,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1435,7 +1435,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1447,7 +1447,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1459,7 +1459,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -1515,11 +1515,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -1573,9 +1573,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: {
@@ -1598,7 +1598,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -1610,7 +1610,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -1626,7 +1626,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1638,7 +1638,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1650,7 +1650,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1662,7 +1662,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -1718,11 +1718,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -1776,9 +1776,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: {
@@ -1801,7 +1801,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -1813,7 +1813,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -1829,7 +1829,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1841,7 +1841,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1853,7 +1853,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -1865,7 +1865,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -1921,11 +1921,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -1979,9 +1979,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -2026,9 +2026,9 @@ declare var __VLS_15: {
             prop?: import("lkt-vue-kernel").LktObject | undefined;
             clickRef?: (Element | import("vue").VueElement) | undefined;
             events?: {
-                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 httpStart?: Function | undefined;
-                httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
             } | undefined;
         } | undefined;
         nextHidden?: boolean | ((currentStep: StepProcessStepConfig, steps: StepProcessStepConfig[]) => boolean) | undefined;
@@ -2052,7 +2052,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             } | undefined;
             iconEnd?: string | {
@@ -2064,7 +2064,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             } | undefined;
             img?: string | undefined;
@@ -2080,7 +2080,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             };
             iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2092,7 +2092,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             };
             iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2104,7 +2104,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             };
             iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2116,7 +2116,7 @@ declare var __VLS_15: {
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
             };
             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -2176,7 +2176,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         iconEnd?: string | {
@@ -2188,7 +2188,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         img?: string | undefined;
@@ -2204,7 +2204,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2216,7 +2216,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2228,7 +2228,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2240,7 +2240,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -2340,9 +2340,9 @@ declare var __VLS_15: {
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             httpStart?: Function | undefined;
-                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     cancelButton?: {
@@ -2365,7 +2365,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         iconEnd?: string | {
@@ -2377,7 +2377,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         img?: string | undefined;
@@ -2393,7 +2393,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2405,7 +2405,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2417,7 +2417,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2429,7 +2429,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -2529,9 +2529,9 @@ declare var __VLS_15: {
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             httpStart?: Function | undefined;
-                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     headerActionsButton?: {
@@ -2554,7 +2554,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         iconEnd?: string | {
@@ -2566,7 +2566,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         img?: string | undefined;
@@ -2582,7 +2582,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2594,7 +2594,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2606,7 +2606,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2618,7 +2618,7 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         };
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -2718,9 +2718,9 @@ declare var __VLS_15: {
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         clickRef?: (Element | import("vue").VueElement) | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             httpStart?: Function | undefined;
-                            httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                 } | undefined;
@@ -2736,11 +2736,11 @@ declare var __VLS_15: {
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 events?: {
-                    click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                    click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 } | undefined;
                 prop?: import("lkt-vue-kernel").LktObject | undefined;
                 onClick?: Function | undefined;
@@ -2789,7 +2789,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -2801,7 +2801,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -2817,7 +2817,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2829,7 +2829,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2841,7 +2841,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -2853,7 +2853,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -2909,11 +2909,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -2967,9 +2967,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: {
@@ -2992,7 +2992,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -3004,7 +3004,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -3020,7 +3020,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3032,7 +3032,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3044,7 +3044,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3056,7 +3056,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -3112,11 +3112,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -3170,9 +3170,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: {
@@ -3195,7 +3195,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -3207,7 +3207,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -3223,7 +3223,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3235,7 +3235,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3247,7 +3247,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3259,7 +3259,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -3315,11 +3315,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -3373,9 +3373,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -3421,7 +3421,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -3433,7 +3433,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -3449,7 +3449,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3461,7 +3461,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3473,7 +3473,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3485,7 +3485,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -3541,11 +3541,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -3599,9 +3599,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: {
@@ -3624,7 +3624,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -3636,7 +3636,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -3652,7 +3652,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3664,7 +3664,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3676,7 +3676,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3688,7 +3688,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -3744,11 +3744,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -3802,9 +3802,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: {
@@ -3827,7 +3827,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     iconEnd?: string | {
@@ -3839,7 +3839,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     } | undefined;
                     img?: string | undefined;
@@ -3855,7 +3855,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3867,7 +3867,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOn?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3879,7 +3879,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     iconEndOff?: import("lkt-vue-kernel").ValidTextValue | {
@@ -3891,7 +3891,7 @@ declare var __VLS_15: {
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                     };
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
@@ -3947,11 +3947,11 @@ declare var __VLS_15: {
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
-                                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                             } | undefined;
                         } | undefined;
                         events?: {
-                            click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                            click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         } | undefined;
                         prop?: import("lkt-vue-kernel").LktObject | undefined;
                         onClick?: Function | undefined;
@@ -4005,9 +4005,9 @@ declare var __VLS_15: {
                     prop?: import("lkt-vue-kernel").LktObject | undefined;
                     clickRef?: (Element | import("vue").VueElement) | undefined;
                     events?: {
-                        click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                         httpStart?: Function | undefined;
-                        httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                        httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -4052,24 +4052,24 @@ declare var __VLS_15: {
             prop?: import("lkt-vue-kernel").LktObject | undefined;
             clickRef?: (Element | import("vue").VueElement) | undefined;
             events?: {
-                click?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                click?: ((data: ClickEventArgs) => void | undefined) | undefined;
                 httpStart?: Function | undefined;
-                httpEnd?: ((data: import("lkt-vue-kernel").ClickEventArgs) => void | undefined) | undefined;
+                httpEnd?: ((data: ClickEventArgs) => void | undefined) | undefined;
             } | undefined;
         } | undefined;
         prevHidden?: boolean | ((currentStep: StepProcessStepConfig, steps: StepProcessStepConfig[]) => boolean) | undefined;
     }[];
-}, __VLS_35: {
+}, __VLS_25: {
     currentStep: any;
     currentStepIndex: any;
     amountOfSteps: number;
 };
 type __VLS_Slots = {} & {
-    [K in NonNullable<typeof __VLS_18>]?: (props: typeof __VLS_19) => any;
+    [K in NonNullable<typeof __VLS_13>]?: (props: typeof __VLS_14) => any;
 } & {
-    'nav-info'?: (props: typeof __VLS_15) => any;
+    'nav-info'?: (props: typeof __VLS_10) => any;
 } & {
-    'nav-info'?: (props: typeof __VLS_35) => any;
+    'nav-info'?: (props: typeof __VLS_25) => any;
 };
 declare const __VLS_component: import("vue").DefineComponent<StepProcessConfig, {
     goNext: () => void;

@@ -32,10 +32,9 @@
             v-show="!isLoading"
             v-bind="prevButton"
             class="is-prev-button"
-            @click="emit('prev')"
         />
 
-        <div class="lkt-step-process--nav-info">
+        <div class="lkt-step-process--nav-info" v-if="slots['nav-info'] || dots && amountOfSteps > 0">
             <template v-if="slots['nav-info']">
                 <slot
                     name="nav-info"
@@ -65,7 +64,6 @@
             v-show="!isLoading"
             v-bind="nextButton"
             class="is-next-button"
-            @click="emit('next')"
         />
     </div>
 </template>
