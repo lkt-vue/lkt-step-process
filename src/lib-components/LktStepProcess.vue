@@ -162,7 +162,19 @@
         });
 
     const onNext = (data: any) => {
-            currentStep.value = stepsHaystack.value[currentStepIndex.value + 1].key;
+            let nextKey = stepsHaystack.value[currentStepIndex.value]?.nextKey;
+            let nextIndex = currentStepIndex.value + 1;
+
+            if (typeof nextKey === 'function') nextKey = nextKey();
+            if (typeof nextKey === 'string') {
+                let needle = stepsHaystack.value.findIndex((z) => {
+                    return z.key === nextKey;
+                })
+
+                if (needle > -1) nextIndex = needle;
+            }
+
+            currentStep.value = stepsHaystack.value[nextIndex].key;
             if (currentStepIndex.value === (stepsHaystack.value.length - 1)) {
                 emit('finish', data);
 
@@ -171,7 +183,19 @@
             }
         },
         onPrev = (data: any) => {
-            currentStep.value = stepsHaystack.value[currentStepIndex.value - 1].key;
+            let prevKey = stepsHaystack.value[currentStepIndex.value]?.prevKey;
+            let nextIndex = currentStepIndex.value - 1;
+
+            if (typeof prevKey === 'function') prevKey = prevKey();
+            if (typeof prevKey === 'string') {
+                let needle = stepsHaystack.value.findIndex((z) => {
+                    return z.key === prevKey;
+                })
+
+                if (needle > -1) nextIndex = needle;
+            }
+
+            currentStep.value = stepsHaystack.value[nextIndex].key;
             emit('prev', data);
         };
 

@@ -1,4 +1,4 @@
-export { Lt as default };
-declare namespace Lt {
-    function install(e: any, a?: {}): void;
+export { Rt as default };
+declare namespace Rt {
+    function install(e: any, t?: {}): void;
 }
