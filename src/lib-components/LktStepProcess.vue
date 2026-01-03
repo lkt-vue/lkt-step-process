@@ -1,13 +1,15 @@
 <script setup lang="ts">
     import { computed, onMounted, ref, useSlots, watch } from 'vue';
     import {
-        ButtonConfig, ClickEventArgs,
+        ButtonConfig,
+        ClickEventArgs,
         getDefaultValues,
         ItemCrudButtonNavPosition,
         ItemCrudButtonNavVisibility,
         StepProcess,
         StepProcessConfig,
         StepProcessStepConfig,
+        StepRenderType,
     } from 'lkt-vue-kernel';
     import ButtonNav from '@/components/ButtonNav.vue';
     import { ButtonNavProps } from '@/config/ButtonNavProps';
@@ -27,12 +29,16 @@
     const isLoading = ref(props.loading),
         currentStep = ref(props.modelValue),
         stepsHaystack = ref(props.steps),
+        firstRenderReached = ref(<{[key:string]:boolean}>{}),
         navRef = ref(null);
 
     watch(() => props.loading, (value) => isLoading.value = value);
     watch(() => props.modelValue, (value) => currentStep.value = value);
     watch(isLoading, (value) => emit('update:loading', value));
-    watch(currentStep, (value) => emit('update:modelValue', value));
+    watch(currentStep, (value) => {
+        firstRenderReached.value[value] = true;
+        emit('update:modelValue', value);
+    });
 
     const slotsSteps = computed(() => {
         let r = [];
@@ -197,6 +203,42 @@
 
             currentStep.value = stepsHaystack.value[nextIndex].key;
             emit('prev', data);
+        },
+        canRenderStep = (stepKey:string) => {
+            const stepIndex = stepsHaystack.value.findIndex((step: StepProcessStepConfig) => step.key === stepKey);
+
+            if (stepIndex > -1 && stepsHaystack.value[stepIndex]?.renderType) {
+                switch (stepsHaystack.value[stepIndex]?.renderType) {
+                    case StepRenderType.AlwaysRendersAlwaysVisible:
+                    case StepRenderType.AlwaysRendersVisibleAfterFirstActive:
+                    case StepRenderType.AlwaysRendersVisibleIfActive:
+                        return true;
+
+                    case StepRenderType.RendersAndVisibleIfActive:
+                        return stepKey === currentStep.value;
+                }
+            }
+            return stepKey === currentStep.value;
+        },
+        canShowStep = (stepKey:string) => {
+
+            const stepIndex = stepsHaystack.value.findIndex((step: StepProcessStepConfig) => step.key === stepKey);
+
+            if (stepIndex > -1 && stepsHaystack.value[stepIndex]?.renderType) {
+                switch (stepsHaystack.value[stepIndex]?.renderType) {
+                    case StepRenderType.AlwaysRendersAlwaysVisible:
+                        return true;
+
+                    case StepRenderType.AlwaysRendersVisibleAfterFirstActive:
+                        return firstRenderReached.value[stepKey] === true;
+
+                    case StepRenderType.AlwaysRendersVisibleIfActive:
+                    case StepRenderType.RendersAndVisibleIfActive:
+                        return stepKey === currentStep.value;
+                }
+            }
+
+            return true;
         };
 
 
@@ -242,7 +284,7 @@
         <div class="lkt-step-process--content" v-if="!isLoading">
             <div class="lkt-grid-1">
                 <template v-for="step in slotsSteps">
-                    <div v-if="step === currentStep">
+                    <div v-if="canRenderStep(step)" v-show="canShowStep(step)">
                         <slot :name="'step-'+step" v-bind:config="stepsHaystack" />
                     </div>
                 </template>

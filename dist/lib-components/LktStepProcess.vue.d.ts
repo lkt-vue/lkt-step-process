@@ -1,4 +1,4 @@
-import { ButtonConfig, ClickEventArgs, ItemCrudButtonNavPosition, ItemCrudButtonNavVisibility, StepProcessConfig, StepProcessStepConfig } from 'lkt-vue-kernel';
+import { ButtonConfig, ClickEventArgs, ItemCrudButtonNavPosition, ItemCrudButtonNavVisibility, StepProcessConfig, StepProcessStepConfig, StepRenderType } from 'lkt-vue-kernel';
 declare var __VLS_10: {
     currentStep: any;
     currentStepIndex: any;
@@ -6,6 +6,7 @@ declare var __VLS_10: {
 }, __VLS_13: string, __VLS_14: {
     config: {
         key: string;
+        renderType?: StepRenderType | undefined;
         prevKey?: string | (() => string) | undefined;
         nextKey?: string | (() => string) | undefined;
         nextButton?: false | {
@@ -15487,8 +15488,8 @@ declare const __VLS_component: import("vue").DefineComponent<StepProcessConfig, 
     buttonNavPosition: ItemCrudButtonNavPosition;
     buttonNavVisibility: ItemCrudButtonNavVisibility;
     steps: Array<StepProcessStepConfig>;
-    nextButton: ButtonConfig;
-    prevButton: ButtonConfig;
+    nextButton: false | ButtonConfig;
+    prevButton: false | ButtonConfig;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
 export default _default;
