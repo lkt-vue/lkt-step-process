@@ -216,6 +216,9 @@
 
                     case StepRenderType.RendersAndVisibleIfActive:
                         return stepKey === currentStep.value;
+
+                    case StepRenderType.RendersAfterFirstActiveVisibleIfActive:
+                        return firstRenderReached.value[stepKey] === true;
                 }
             }
             return stepKey === currentStep.value;
@@ -234,6 +237,7 @@
 
                     case StepRenderType.AlwaysRendersVisibleIfActive:
                     case StepRenderType.RendersAndVisibleIfActive:
+                    case StepRenderType.RendersAfterFirstActiveVisibleIfActive:
                         return stepKey === currentStep.value;
                 }
             }
