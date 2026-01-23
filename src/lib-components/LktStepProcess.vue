@@ -49,6 +49,20 @@
     const currentStepIndex = computed(() => {
             return stepsHaystack.value.findIndex((step: StepProcessStepConfig) => step.key === currentStep.value);
         }),
+        visibleStepIndex = computed(() => {
+            let baseIndex = stepsHaystack.value.findIndex((step: StepProcessStepConfig) => step.key === currentStep.value);
+            let r = baseIndex;
+            for (let i = 0; i < baseIndex; ++i) {
+                let excluded = false,
+                    excludedValue = stepsHaystack.value[i].excludedFromTotalCount;
+
+                if (typeof excludedValue === 'function') excluded = excludedValue() === true;
+                else if (typeof excludedValue === 'boolean') excluded = excludedValue === true;
+
+                if (excluded) --r;
+            }
+            return r + 1;
+        }),
         currentStepConfig = computed(() => {
             return stepsHaystack.value[currentStepIndex.value];
         }),
@@ -146,7 +160,15 @@
             return props.buttonNavPosition === ItemCrudButtonNavPosition.Bottom;
         }),
         computedAmountOfSteps = computed(() => {
-            return stepsHaystack.value.length;
+            let r = 0;
+            stepsHaystack.value.forEach(step => {
+                let excluded = false;
+                if (typeof step.excludedFromTotalCount === 'function') excluded = step.excludedFromTotalCount() === true;
+                else if (typeof step.excludedFromTotalCount === 'boolean') excluded = step.excludedFromTotalCount === true;
+
+                if (!excluded) ++r;
+            })
+            return r;
         }),
         computedButtonNavProps = computed(() => {
             return <ButtonNavProps>{
@@ -154,7 +176,9 @@
                 prevButton: computedPrevButton.value,
                 nextButton: computedNextButton.value,
                 currentStep: currentStep.value,
+                currentStepConfig: currentStepConfig.value,
                 currentStepIndex: currentStepIndex.value,
+                visibleStepIndex: visibleStepIndex.value,
                 amountOfSteps: computedAmountOfSteps.value,
                 dots: props.dots,
                 dotsNumbers: props.dotsNumbers,
@@ -273,10 +297,11 @@
             ref="navRef"
             v-bind="computedButtonNavProps"
         >
-            <template #nav-info="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['nav-info']">
+            <template #nav-info="{currentStep, currentStepIndex, amountOfSteps, visibleStep}" v-if="slots['nav-info']">
                 <slot
                     name="nav-info"
                       v-bind="{
+                        visibleStep,
                         currentStep,
                         currentStepIndex,
                         amountOfSteps: computedAmountOfSteps,
@@ -301,10 +326,11 @@
             ref="navRef"
             v-bind="computedButtonNavProps"
         >
-            <template #nav-info="{currentStep, currentStepIndex, amountOfSteps}" v-if="slots['nav-info']">
+            <template #nav-info="{currentStep, currentStepIndex, amountOfSteps, visibleStep}" v-if="slots['nav-info']">
                 <slot
                     name="nav-info"
                     v-bind="{
+                        visibleStep,
                         currentStep,
                         currentStepIndex,
                         amountOfSteps: computedAmountOfSteps,

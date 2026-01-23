@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
     import { ButtonNavProps } from '../config/ButtonNavProps';
-    import { ref, SetupContext, useSlots } from 'vue';
+    import { computed, ref, SetupContext, useSlots } from 'vue';
     import { DotConfig } from 'lkt-vue-kernel';
 
     const props = withDefaults(defineProps<ButtonNavProps>(), {});
@@ -22,10 +22,16 @@
             prevButtonRef.value.click();
         }
     });
+
+    const stepHasDotsInfo = computed(() => {
+        if (typeof props.currentStepConfig?.excludedFromTotalCount === 'function') return !props.currentStepConfig.excludedFromTotalCount();
+        if (typeof props.currentStepConfig?.excludedFromTotalCount === 'boolean') return !props.currentStepConfig.excludedFromTotalCount;
+        return true;
+    })
 </script>
 
 <template>
-    <div class="lkt-step-process--nav">
+    <div class="lkt-step-process--nav" v-if="prevButton || nextButton || (stepHasDotsInfo && (slots['nav-info'] || dots && amountOfSteps > 0))">
         <lkt-button
             ref="prevButtonRef"
             v-if="prevButton"
@@ -34,11 +40,12 @@
             class="is-prev-button"
         />
 
-        <div class="lkt-step-process--nav-info" v-if="slots['nav-info'] || dots && amountOfSteps > 0">
+        <div class="lkt-step-process--nav-info" v-if="stepHasDotsInfo && (slots['nav-info'] || dots && amountOfSteps > 0)">
             <template v-if="slots['nav-info']">
                 <slot
                     name="nav-info"
                     v-bind="{
+                        visibleStep: visibleStepIndex,
                         currentStep,
                         currentStepIndex,
                         amountOfSteps,
@@ -46,12 +53,12 @@
                 />
             </template>
 
-            <div class="lkt-step-process--dots" v-if="dots && amountOfSteps > 0">
+            <div class="lkt-step-process--dots" v-if="dots && amountOfSteps > 0 && stepHasDotsInfo">
                 <lkt-dot
                     v-for="n in amountOfSteps"
                     v-bind="<DotConfig>{
                         text: dotsNumbers ? n : '',
-                        class: n === (currentStepIndex + 1) ? 'is-active' : '',
+                        class: n === visibleStepIndex ? 'is-active' : '',
                     }"
                 />
             </div>

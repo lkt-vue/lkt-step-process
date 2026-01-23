@@ -1,5 +1,6 @@
 import { ButtonNavProps } from '../config/ButtonNavProps';
 declare var __VLS_7: {
+    visibleStep: number;
     currentStep: string;
     currentStepIndex: number;
     amountOfSteps: number;

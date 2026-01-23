@@ -1,5 +1,6 @@
 import { ButtonConfig, ClickEventArgs, ItemCrudButtonNavPosition, ItemCrudButtonNavVisibility, StepProcessConfig, StepProcessStepConfig, StepRenderType } from 'lkt-vue-kernel';
 declare var __VLS_10: {
+    visibleStep: any;
     currentStep: any;
     currentStepIndex: any;
     amountOfSteps: number;
@@ -26,6 +27,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -38,6 +40,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -54,6 +57,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -66,6 +70,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -78,6 +83,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -90,6 +96,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -131,6 +138,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -167,7 +175,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -244,18 +252,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -298,7 +306,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -375,18 +383,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -437,6 +445,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -449,6 +458,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -465,6 +475,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -477,6 +488,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -489,6 +501,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -501,6 +514,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -531,6 +545,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -567,7 +582,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -644,18 +659,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -698,7 +713,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -775,18 +790,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -844,6 +859,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -880,7 +896,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -957,18 +973,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -1011,7 +1027,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -1088,18 +1104,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -1193,7 +1209,7 @@ declare var __VLS_10: {
                                     template?: string | object | undefined;
                                     render?: Function | undefined;
                                     components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                    directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                    directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                     inheritAttrs?: boolean | undefined;
                                     emits?: any;
                                     slots?: {} | undefined;
@@ -1270,18 +1286,18 @@ declare var __VLS_10: {
                                     filters?: Record<string, Function> | undefined;
                                     mixins?: any[] | undefined;
                                     extends?: any;
-                                    beforeCreate?: (() => void) | undefined;
-                                    created?: (() => void) | undefined;
-                                    beforeMount?: (() => void) | undefined;
-                                    mounted?: (() => void) | undefined;
-                                    beforeUpdate?: (() => void) | undefined;
-                                    updated?: (() => void) | undefined;
-                                    activated?: (() => void) | undefined;
-                                    deactivated?: (() => void) | undefined;
-                                    beforeDestroy?: (() => void) | undefined;
-                                    beforeUnmount?: (() => void) | undefined;
-                                    destroyed?: (() => void) | undefined;
-                                    unmounted?: (() => void) | undefined;
+                                    beforeCreate?: (() => any) | undefined;
+                                    created?: (() => any) | undefined;
+                                    beforeMount?: (() => any) | undefined;
+                                    mounted?: (() => any) | undefined;
+                                    beforeUpdate?: (() => any) | undefined;
+                                    updated?: (() => any) | undefined;
+                                    activated?: (() => any) | undefined;
+                                    deactivated?: (() => any) | undefined;
+                                    beforeDestroy?: (() => any) | undefined;
+                                    beforeUnmount?: (() => any) | undefined;
+                                    destroyed?: (() => any) | undefined;
+                                    unmounted?: (() => any) | undefined;
                                     renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -1320,6 +1336,24 @@ declare var __VLS_10: {
                             click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                             httpStart?: Function | undefined;
                             httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                        } | undefined;
+                        preventDefault?: boolean | undefined;
+                        stopPropagation?: boolean | undefined;
+                        dispatchHttpNotifications?: boolean | undefined;
+                        hooks?: {
+                            onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                                path?: string | undefined;
+                                name?: string | undefined;
+                                hash?: string | undefined;
+                                params?: import("lkt-vue-kernel").LktObject | undefined;
+                                query?: import("lkt-vue-kernel").LktObject | undefined;
+                                replace?: boolean | undefined;
+                            } | undefined;
+                            onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            redirectType?: "replace" | "push" | undefined;
+                            onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                         } | undefined;
                     } | undefined;
                     cancelButton?: false | {
@@ -1339,6 +1373,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -1351,6 +1386,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -1367,6 +1403,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -1379,6 +1416,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -1391,6 +1429,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -1403,6 +1442,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -1433,6 +1473,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -1469,7 +1510,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -1546,18 +1587,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -1600,7 +1641,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -1677,18 +1718,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -1746,6 +1787,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -1782,7 +1824,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -1859,18 +1901,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -1913,7 +1955,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -1990,18 +2032,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -2095,7 +2137,7 @@ declare var __VLS_10: {
                                     template?: string | object | undefined;
                                     render?: Function | undefined;
                                     components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                    directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                    directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                     inheritAttrs?: boolean | undefined;
                                     emits?: any;
                                     slots?: {} | undefined;
@@ -2172,18 +2214,18 @@ declare var __VLS_10: {
                                     filters?: Record<string, Function> | undefined;
                                     mixins?: any[] | undefined;
                                     extends?: any;
-                                    beforeCreate?: (() => void) | undefined;
-                                    created?: (() => void) | undefined;
-                                    beforeMount?: (() => void) | undefined;
-                                    mounted?: (() => void) | undefined;
-                                    beforeUpdate?: (() => void) | undefined;
-                                    updated?: (() => void) | undefined;
-                                    activated?: (() => void) | undefined;
-                                    deactivated?: (() => void) | undefined;
-                                    beforeDestroy?: (() => void) | undefined;
-                                    beforeUnmount?: (() => void) | undefined;
-                                    destroyed?: (() => void) | undefined;
-                                    unmounted?: (() => void) | undefined;
+                                    beforeCreate?: (() => any) | undefined;
+                                    created?: (() => any) | undefined;
+                                    beforeMount?: (() => any) | undefined;
+                                    mounted?: (() => any) | undefined;
+                                    beforeUpdate?: (() => any) | undefined;
+                                    updated?: (() => any) | undefined;
+                                    activated?: (() => any) | undefined;
+                                    deactivated?: (() => any) | undefined;
+                                    beforeDestroy?: (() => any) | undefined;
+                                    beforeUnmount?: (() => any) | undefined;
+                                    destroyed?: (() => any) | undefined;
+                                    unmounted?: (() => any) | undefined;
                                     renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -2222,6 +2264,24 @@ declare var __VLS_10: {
                             click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                             httpStart?: Function | undefined;
                             httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                        } | undefined;
+                        preventDefault?: boolean | undefined;
+                        stopPropagation?: boolean | undefined;
+                        dispatchHttpNotifications?: boolean | undefined;
+                        hooks?: {
+                            onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                                path?: string | undefined;
+                                name?: string | undefined;
+                                hash?: string | undefined;
+                                params?: import("lkt-vue-kernel").LktObject | undefined;
+                                query?: import("lkt-vue-kernel").LktObject | undefined;
+                                replace?: boolean | undefined;
+                            } | undefined;
+                            onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            redirectType?: "replace" | "push" | undefined;
+                            onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                         } | undefined;
                     } | undefined;
                     headerActionsButton?: false | {
@@ -2241,6 +2301,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -2253,6 +2314,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -2269,6 +2331,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -2281,6 +2344,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -2293,6 +2357,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -2305,6 +2370,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -2335,6 +2401,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -2371,7 +2438,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -2448,18 +2515,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -2502,7 +2569,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -2579,18 +2646,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -2648,6 +2715,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -2684,7 +2752,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -2761,18 +2829,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -2815,7 +2883,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -2892,18 +2960,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -2997,7 +3065,7 @@ declare var __VLS_10: {
                                     template?: string | object | undefined;
                                     render?: Function | undefined;
                                     components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                    directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                    directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                     inheritAttrs?: boolean | undefined;
                                     emits?: any;
                                     slots?: {} | undefined;
@@ -3074,18 +3142,18 @@ declare var __VLS_10: {
                                     filters?: Record<string, Function> | undefined;
                                     mixins?: any[] | undefined;
                                     extends?: any;
-                                    beforeCreate?: (() => void) | undefined;
-                                    created?: (() => void) | undefined;
-                                    beforeMount?: (() => void) | undefined;
-                                    mounted?: (() => void) | undefined;
-                                    beforeUpdate?: (() => void) | undefined;
-                                    updated?: (() => void) | undefined;
-                                    activated?: (() => void) | undefined;
-                                    deactivated?: (() => void) | undefined;
-                                    beforeDestroy?: (() => void) | undefined;
-                                    beforeUnmount?: (() => void) | undefined;
-                                    destroyed?: (() => void) | undefined;
-                                    unmounted?: (() => void) | undefined;
+                                    beforeCreate?: (() => any) | undefined;
+                                    created?: (() => any) | undefined;
+                                    beforeMount?: (() => any) | undefined;
+                                    mounted?: (() => any) | undefined;
+                                    beforeUpdate?: (() => any) | undefined;
+                                    updated?: (() => any) | undefined;
+                                    activated?: (() => any) | undefined;
+                                    deactivated?: (() => any) | undefined;
+                                    beforeDestroy?: (() => any) | undefined;
+                                    beforeUnmount?: (() => any) | undefined;
+                                    destroyed?: (() => any) | undefined;
+                                    unmounted?: (() => any) | undefined;
                                     renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -3125,6 +3193,24 @@ declare var __VLS_10: {
                             httpStart?: Function | undefined;
                             httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         } | undefined;
+                        preventDefault?: boolean | undefined;
+                        stopPropagation?: boolean | undefined;
+                        dispatchHttpNotifications?: boolean | undefined;
+                        hooks?: {
+                            onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                                path?: string | undefined;
+                                name?: string | undefined;
+                                hash?: string | undefined;
+                                params?: import("lkt-vue-kernel").LktObject | undefined;
+                                query?: import("lkt-vue-kernel").LktObject | undefined;
+                                replace?: boolean | undefined;
+                            } | undefined;
+                            onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            redirectType?: "replace" | "push" | undefined;
+                            onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        } | undefined;
                     } | undefined;
                 } | undefined;
                 imposter?: boolean | undefined;
@@ -3136,6 +3222,7 @@ declare var __VLS_10: {
                     text?: import("lkt-vue-kernel").ValidTextValue;
                     class?: import("lkt-vue-kernel").ValidTextValue;
                     type?: import("lkt-vue-kernel").IconType | undefined;
+                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                     events?: {
@@ -3170,6 +3257,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -3206,7 +3294,7 @@ declare var __VLS_10: {
                             template?: string | object | undefined;
                             render?: Function | undefined;
                             components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                            directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                            directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                             inheritAttrs?: boolean | undefined;
                             emits?: any;
                             slots?: {} | undefined;
@@ -3283,18 +3371,18 @@ declare var __VLS_10: {
                             filters?: Record<string, Function> | undefined;
                             mixins?: any[] | undefined;
                             extends?: any;
-                            beforeCreate?: (() => void) | undefined;
-                            created?: (() => void) | undefined;
-                            beforeMount?: (() => void) | undefined;
-                            mounted?: (() => void) | undefined;
-                            beforeUpdate?: (() => void) | undefined;
-                            updated?: (() => void) | undefined;
-                            activated?: (() => void) | undefined;
-                            deactivated?: (() => void) | undefined;
-                            beforeDestroy?: (() => void) | undefined;
-                            beforeUnmount?: (() => void) | undefined;
-                            destroyed?: (() => void) | undefined;
-                            unmounted?: (() => void) | undefined;
+                            beforeCreate?: (() => any) | undefined;
+                            created?: (() => any) | undefined;
+                            beforeMount?: (() => any) | undefined;
+                            mounted?: (() => any) | undefined;
+                            beforeUpdate?: (() => any) | undefined;
+                            updated?: (() => any) | undefined;
+                            activated?: (() => any) | undefined;
+                            deactivated?: (() => any) | undefined;
+                            beforeDestroy?: (() => any) | undefined;
+                            beforeUnmount?: (() => any) | undefined;
+                            destroyed?: (() => any) | undefined;
+                            unmounted?: (() => any) | undefined;
                             renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -3337,7 +3425,7 @@ declare var __VLS_10: {
                             template?: string | object | undefined;
                             render?: Function | undefined;
                             components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                            directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                            directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                             inheritAttrs?: boolean | undefined;
                             emits?: any;
                             slots?: {} | undefined;
@@ -3414,18 +3502,18 @@ declare var __VLS_10: {
                             filters?: Record<string, Function> | undefined;
                             mixins?: any[] | undefined;
                             extends?: any;
-                            beforeCreate?: (() => void) | undefined;
-                            created?: (() => void) | undefined;
-                            beforeMount?: (() => void) | undefined;
-                            mounted?: (() => void) | undefined;
-                            beforeUpdate?: (() => void) | undefined;
-                            updated?: (() => void) | undefined;
-                            activated?: (() => void) | undefined;
-                            deactivated?: (() => void) | undefined;
-                            beforeDestroy?: (() => void) | undefined;
-                            beforeUnmount?: (() => void) | undefined;
-                            destroyed?: (() => void) | undefined;
-                            unmounted?: (() => void) | undefined;
+                            beforeCreate?: (() => any) | undefined;
+                            created?: (() => any) | undefined;
+                            beforeMount?: (() => any) | undefined;
+                            mounted?: (() => any) | undefined;
+                            beforeUpdate?: (() => any) | undefined;
+                            updated?: (() => any) | undefined;
+                            activated?: (() => any) | undefined;
+                            deactivated?: (() => any) | undefined;
+                            beforeDestroy?: (() => any) | undefined;
+                            beforeUnmount?: (() => any) | undefined;
+                            destroyed?: (() => any) | undefined;
+                            unmounted?: (() => any) | undefined;
                             renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -3476,6 +3564,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -3488,6 +3577,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -3504,6 +3594,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -3516,6 +3607,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -3528,6 +3620,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -3540,6 +3633,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -3581,6 +3675,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -3617,7 +3712,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -3694,18 +3789,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -3748,7 +3843,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -3825,18 +3920,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -3883,6 +3978,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -3959,7 +4055,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -4036,18 +4132,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -4086,6 +4182,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: false | {
@@ -4105,6 +4219,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4117,6 +4232,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4133,6 +4249,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4145,6 +4262,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4157,6 +4275,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4169,6 +4288,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4210,6 +4330,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -4246,7 +4367,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -4323,18 +4444,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -4377,7 +4498,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -4454,18 +4575,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -4512,6 +4633,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -4588,7 +4710,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -4665,18 +4787,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -4715,6 +4837,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: false | {
@@ -4734,6 +4874,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4746,6 +4887,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4762,6 +4904,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4774,6 +4917,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4786,6 +4930,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4798,6 +4943,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -4839,6 +4985,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -4875,7 +5022,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -4952,18 +5099,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -5006,7 +5153,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -5083,18 +5230,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -5141,6 +5288,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -5217,7 +5365,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -5294,18 +5442,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -5344,6 +5492,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -5367,6 +5533,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -5403,7 +5570,7 @@ declare var __VLS_10: {
                             template?: string | object | undefined;
                             render?: Function | undefined;
                             components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                            directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                            directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                             inheritAttrs?: boolean | undefined;
                             emits?: any;
                             slots?: {} | undefined;
@@ -5480,18 +5647,18 @@ declare var __VLS_10: {
                             filters?: Record<string, Function> | undefined;
                             mixins?: any[] | undefined;
                             extends?: any;
-                            beforeCreate?: (() => void) | undefined;
-                            created?: (() => void) | undefined;
-                            beforeMount?: (() => void) | undefined;
-                            mounted?: (() => void) | undefined;
-                            beforeUpdate?: (() => void) | undefined;
-                            updated?: (() => void) | undefined;
-                            activated?: (() => void) | undefined;
-                            deactivated?: (() => void) | undefined;
-                            beforeDestroy?: (() => void) | undefined;
-                            beforeUnmount?: (() => void) | undefined;
-                            destroyed?: (() => void) | undefined;
-                            unmounted?: (() => void) | undefined;
+                            beforeCreate?: (() => any) | undefined;
+                            created?: (() => any) | undefined;
+                            beforeMount?: (() => any) | undefined;
+                            mounted?: (() => any) | undefined;
+                            beforeUpdate?: (() => any) | undefined;
+                            updated?: (() => any) | undefined;
+                            activated?: (() => any) | undefined;
+                            deactivated?: (() => any) | undefined;
+                            beforeDestroy?: (() => any) | undefined;
+                            beforeUnmount?: (() => any) | undefined;
+                            destroyed?: (() => any) | undefined;
+                            unmounted?: (() => any) | undefined;
                             renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -5534,7 +5701,7 @@ declare var __VLS_10: {
                             template?: string | object | undefined;
                             render?: Function | undefined;
                             components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                            directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                            directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                             inheritAttrs?: boolean | undefined;
                             emits?: any;
                             slots?: {} | undefined;
@@ -5611,18 +5778,18 @@ declare var __VLS_10: {
                             filters?: Record<string, Function> | undefined;
                             mixins?: any[] | undefined;
                             extends?: any;
-                            beforeCreate?: (() => void) | undefined;
-                            created?: (() => void) | undefined;
-                            beforeMount?: (() => void) | undefined;
-                            mounted?: (() => void) | undefined;
-                            beforeUpdate?: (() => void) | undefined;
-                            updated?: (() => void) | undefined;
-                            activated?: (() => void) | undefined;
-                            deactivated?: (() => void) | undefined;
-                            beforeDestroy?: (() => void) | undefined;
-                            beforeUnmount?: (() => void) | undefined;
-                            destroyed?: (() => void) | undefined;
-                            unmounted?: (() => void) | undefined;
+                            beforeCreate?: (() => any) | undefined;
+                            created?: (() => any) | undefined;
+                            beforeMount?: (() => any) | undefined;
+                            mounted?: (() => any) | undefined;
+                            beforeUpdate?: (() => any) | undefined;
+                            updated?: (() => any) | undefined;
+                            activated?: (() => any) | undefined;
+                            deactivated?: (() => any) | undefined;
+                            beforeDestroy?: (() => any) | undefined;
+                            beforeUnmount?: (() => any) | undefined;
+                            destroyed?: (() => any) | undefined;
+                            unmounted?: (() => any) | undefined;
                             renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -5673,6 +5840,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -5685,6 +5853,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -5701,6 +5870,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -5713,6 +5883,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -5725,6 +5896,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -5737,6 +5909,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -5778,6 +5951,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -5814,7 +5988,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -5891,18 +6065,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -5945,7 +6119,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -6022,18 +6196,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -6080,6 +6254,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -6156,7 +6331,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -6233,18 +6408,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -6283,6 +6458,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: false | {
@@ -6302,6 +6495,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6314,6 +6508,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6330,6 +6525,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6342,6 +6538,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6354,6 +6551,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6366,6 +6564,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6407,6 +6606,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -6443,7 +6643,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -6520,18 +6720,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -6574,7 +6774,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -6651,18 +6851,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -6709,6 +6909,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -6785,7 +6986,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -6862,18 +7063,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -6912,6 +7113,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: false | {
@@ -6931,6 +7150,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6943,6 +7163,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6959,6 +7180,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6971,6 +7193,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6983,6 +7206,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -6995,6 +7219,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -7036,6 +7261,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -7072,7 +7298,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -7149,18 +7375,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -7203,7 +7429,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -7280,18 +7506,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -7338,6 +7564,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -7414,7 +7641,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -7491,18 +7718,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -7541,6 +7768,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -7600,7 +7845,7 @@ declare var __VLS_10: {
                         template?: string | object | undefined;
                         render?: Function | undefined;
                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                         inheritAttrs?: boolean | undefined;
                         emits?: any;
                         slots?: {} | undefined;
@@ -7677,18 +7922,18 @@ declare var __VLS_10: {
                         filters?: Record<string, Function> | undefined;
                         mixins?: any[] | undefined;
                         extends?: any;
-                        beforeCreate?: (() => void) | undefined;
-                        created?: (() => void) | undefined;
-                        beforeMount?: (() => void) | undefined;
-                        mounted?: (() => void) | undefined;
-                        beforeUpdate?: (() => void) | undefined;
-                        updated?: (() => void) | undefined;
-                        activated?: (() => void) | undefined;
-                        deactivated?: (() => void) | undefined;
-                        beforeDestroy?: (() => void) | undefined;
-                        beforeUnmount?: (() => void) | undefined;
-                        destroyed?: (() => void) | undefined;
-                        unmounted?: (() => void) | undefined;
+                        beforeCreate?: (() => any) | undefined;
+                        created?: (() => any) | undefined;
+                        beforeMount?: (() => any) | undefined;
+                        mounted?: (() => any) | undefined;
+                        beforeUpdate?: (() => any) | undefined;
+                        updated?: (() => any) | undefined;
+                        activated?: (() => any) | undefined;
+                        deactivated?: (() => any) | undefined;
+                        beforeDestroy?: (() => any) | undefined;
+                        beforeUnmount?: (() => any) | undefined;
+                        destroyed?: (() => any) | undefined;
+                        unmounted?: (() => any) | undefined;
                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -7727,6 +7972,24 @@ declare var __VLS_10: {
                 click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                 httpStart?: Function | undefined;
                 httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+            } | undefined;
+            preventDefault?: boolean | undefined;
+            stopPropagation?: boolean | undefined;
+            dispatchHttpNotifications?: boolean | undefined;
+            hooks?: {
+                onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                    path?: string | undefined;
+                    name?: string | undefined;
+                    hash?: string | undefined;
+                    params?: import("lkt-vue-kernel").LktObject | undefined;
+                    query?: import("lkt-vue-kernel").LktObject | undefined;
+                    replace?: boolean | undefined;
+                } | undefined;
+                onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                redirectType?: "replace" | "push" | undefined;
+                onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
             } | undefined;
         } | undefined;
         nextHidden?: boolean | ((currentStep: StepProcessStepConfig, steps: StepProcessStepConfig[]) => boolean) | undefined;
@@ -7747,6 +8010,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -7759,6 +8023,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -7775,6 +8040,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -7787,6 +8053,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -7799,6 +8066,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -7811,6 +8079,7 @@ declare var __VLS_10: {
                 text?: import("lkt-vue-kernel").ValidTextValue;
                 class?: import("lkt-vue-kernel").ValidTextValue;
                 type?: import("lkt-vue-kernel").IconType | undefined;
+                visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                 dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                 position?: import("lkt-vue-kernel").IconPosition | undefined;
                 events?: {
@@ -7852,6 +8121,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -7888,7 +8158,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -7965,18 +8235,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -8019,7 +8289,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -8096,18 +8366,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -8158,6 +8428,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -8170,6 +8441,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -8186,6 +8458,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -8198,6 +8471,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -8210,6 +8484,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -8222,6 +8497,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -8252,6 +8528,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -8288,7 +8565,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -8365,18 +8642,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -8419,7 +8696,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -8496,18 +8773,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -8565,6 +8842,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -8601,7 +8879,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -8678,18 +8956,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -8732,7 +9010,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -8809,18 +9087,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -8914,7 +9192,7 @@ declare var __VLS_10: {
                                     template?: string | object | undefined;
                                     render?: Function | undefined;
                                     components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                    directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                    directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                     inheritAttrs?: boolean | undefined;
                                     emits?: any;
                                     slots?: {} | undefined;
@@ -8991,18 +9269,18 @@ declare var __VLS_10: {
                                     filters?: Record<string, Function> | undefined;
                                     mixins?: any[] | undefined;
                                     extends?: any;
-                                    beforeCreate?: (() => void) | undefined;
-                                    created?: (() => void) | undefined;
-                                    beforeMount?: (() => void) | undefined;
-                                    mounted?: (() => void) | undefined;
-                                    beforeUpdate?: (() => void) | undefined;
-                                    updated?: (() => void) | undefined;
-                                    activated?: (() => void) | undefined;
-                                    deactivated?: (() => void) | undefined;
-                                    beforeDestroy?: (() => void) | undefined;
-                                    beforeUnmount?: (() => void) | undefined;
-                                    destroyed?: (() => void) | undefined;
-                                    unmounted?: (() => void) | undefined;
+                                    beforeCreate?: (() => any) | undefined;
+                                    created?: (() => any) | undefined;
+                                    beforeMount?: (() => any) | undefined;
+                                    mounted?: (() => any) | undefined;
+                                    beforeUpdate?: (() => any) | undefined;
+                                    updated?: (() => any) | undefined;
+                                    activated?: (() => any) | undefined;
+                                    deactivated?: (() => any) | undefined;
+                                    beforeDestroy?: (() => any) | undefined;
+                                    beforeUnmount?: (() => any) | undefined;
+                                    destroyed?: (() => any) | undefined;
+                                    unmounted?: (() => any) | undefined;
                                     renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -9041,6 +9319,24 @@ declare var __VLS_10: {
                             click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                             httpStart?: Function | undefined;
                             httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                        } | undefined;
+                        preventDefault?: boolean | undefined;
+                        stopPropagation?: boolean | undefined;
+                        dispatchHttpNotifications?: boolean | undefined;
+                        hooks?: {
+                            onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                                path?: string | undefined;
+                                name?: string | undefined;
+                                hash?: string | undefined;
+                                params?: import("lkt-vue-kernel").LktObject | undefined;
+                                query?: import("lkt-vue-kernel").LktObject | undefined;
+                                replace?: boolean | undefined;
+                            } | undefined;
+                            onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            redirectType?: "replace" | "push" | undefined;
+                            onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                         } | undefined;
                     } | undefined;
                     cancelButton?: false | {
@@ -9060,6 +9356,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -9072,6 +9369,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -9088,6 +9386,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -9100,6 +9399,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -9112,6 +9412,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -9124,6 +9425,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -9154,6 +9456,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -9190,7 +9493,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -9267,18 +9570,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -9321,7 +9624,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -9398,18 +9701,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -9467,6 +9770,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -9503,7 +9807,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -9580,18 +9884,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -9634,7 +9938,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -9711,18 +10015,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -9816,7 +10120,7 @@ declare var __VLS_10: {
                                     template?: string | object | undefined;
                                     render?: Function | undefined;
                                     components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                    directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                    directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                     inheritAttrs?: boolean | undefined;
                                     emits?: any;
                                     slots?: {} | undefined;
@@ -9893,18 +10197,18 @@ declare var __VLS_10: {
                                     filters?: Record<string, Function> | undefined;
                                     mixins?: any[] | undefined;
                                     extends?: any;
-                                    beforeCreate?: (() => void) | undefined;
-                                    created?: (() => void) | undefined;
-                                    beforeMount?: (() => void) | undefined;
-                                    mounted?: (() => void) | undefined;
-                                    beforeUpdate?: (() => void) | undefined;
-                                    updated?: (() => void) | undefined;
-                                    activated?: (() => void) | undefined;
-                                    deactivated?: (() => void) | undefined;
-                                    beforeDestroy?: (() => void) | undefined;
-                                    beforeUnmount?: (() => void) | undefined;
-                                    destroyed?: (() => void) | undefined;
-                                    unmounted?: (() => void) | undefined;
+                                    beforeCreate?: (() => any) | undefined;
+                                    created?: (() => any) | undefined;
+                                    beforeMount?: (() => any) | undefined;
+                                    mounted?: (() => any) | undefined;
+                                    beforeUpdate?: (() => any) | undefined;
+                                    updated?: (() => any) | undefined;
+                                    activated?: (() => any) | undefined;
+                                    deactivated?: (() => any) | undefined;
+                                    beforeDestroy?: (() => any) | undefined;
+                                    beforeUnmount?: (() => any) | undefined;
+                                    destroyed?: (() => any) | undefined;
+                                    unmounted?: (() => any) | undefined;
                                     renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -9943,6 +10247,24 @@ declare var __VLS_10: {
                             click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                             httpStart?: Function | undefined;
                             httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                        } | undefined;
+                        preventDefault?: boolean | undefined;
+                        stopPropagation?: boolean | undefined;
+                        dispatchHttpNotifications?: boolean | undefined;
+                        hooks?: {
+                            onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                                path?: string | undefined;
+                                name?: string | undefined;
+                                hash?: string | undefined;
+                                params?: import("lkt-vue-kernel").LktObject | undefined;
+                                query?: import("lkt-vue-kernel").LktObject | undefined;
+                                replace?: boolean | undefined;
+                            } | undefined;
+                            onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            redirectType?: "replace" | "push" | undefined;
+                            onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                         } | undefined;
                     } | undefined;
                     headerActionsButton?: false | {
@@ -9962,6 +10284,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -9974,6 +10297,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -9990,6 +10314,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -10002,6 +10327,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -10014,6 +10340,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -10026,6 +10353,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -10056,6 +10384,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -10092,7 +10421,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -10169,18 +10498,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -10223,7 +10552,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -10300,18 +10629,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -10369,6 +10698,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -10405,7 +10735,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -10482,18 +10812,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -10536,7 +10866,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -10613,18 +10943,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -10718,7 +11048,7 @@ declare var __VLS_10: {
                                     template?: string | object | undefined;
                                     render?: Function | undefined;
                                     components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                    directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                    directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                     inheritAttrs?: boolean | undefined;
                                     emits?: any;
                                     slots?: {} | undefined;
@@ -10795,18 +11125,18 @@ declare var __VLS_10: {
                                     filters?: Record<string, Function> | undefined;
                                     mixins?: any[] | undefined;
                                     extends?: any;
-                                    beforeCreate?: (() => void) | undefined;
-                                    created?: (() => void) | undefined;
-                                    beforeMount?: (() => void) | undefined;
-                                    mounted?: (() => void) | undefined;
-                                    beforeUpdate?: (() => void) | undefined;
-                                    updated?: (() => void) | undefined;
-                                    activated?: (() => void) | undefined;
-                                    deactivated?: (() => void) | undefined;
-                                    beforeDestroy?: (() => void) | undefined;
-                                    beforeUnmount?: (() => void) | undefined;
-                                    destroyed?: (() => void) | undefined;
-                                    unmounted?: (() => void) | undefined;
+                                    beforeCreate?: (() => any) | undefined;
+                                    created?: (() => any) | undefined;
+                                    beforeMount?: (() => any) | undefined;
+                                    mounted?: (() => any) | undefined;
+                                    beforeUpdate?: (() => any) | undefined;
+                                    updated?: (() => any) | undefined;
+                                    activated?: (() => any) | undefined;
+                                    deactivated?: (() => any) | undefined;
+                                    beforeDestroy?: (() => any) | undefined;
+                                    beforeUnmount?: (() => any) | undefined;
+                                    destroyed?: (() => any) | undefined;
+                                    unmounted?: (() => any) | undefined;
                                     renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                     errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -10846,6 +11176,24 @@ declare var __VLS_10: {
                             httpStart?: Function | undefined;
                             httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         } | undefined;
+                        preventDefault?: boolean | undefined;
+                        stopPropagation?: boolean | undefined;
+                        dispatchHttpNotifications?: boolean | undefined;
+                        hooks?: {
+                            onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                                path?: string | undefined;
+                                name?: string | undefined;
+                                hash?: string | undefined;
+                                params?: import("lkt-vue-kernel").LktObject | undefined;
+                                query?: import("lkt-vue-kernel").LktObject | undefined;
+                                replace?: boolean | undefined;
+                            } | undefined;
+                            onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            redirectType?: "replace" | "push" | undefined;
+                            onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                            onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        } | undefined;
                     } | undefined;
                 } | undefined;
                 imposter?: boolean | undefined;
@@ -10857,6 +11205,7 @@ declare var __VLS_10: {
                     text?: import("lkt-vue-kernel").ValidTextValue;
                     class?: import("lkt-vue-kernel").ValidTextValue;
                     type?: import("lkt-vue-kernel").IconType | undefined;
+                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                     events?: {
@@ -10891,6 +11240,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -10927,7 +11277,7 @@ declare var __VLS_10: {
                             template?: string | object | undefined;
                             render?: Function | undefined;
                             components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                            directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                            directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                             inheritAttrs?: boolean | undefined;
                             emits?: any;
                             slots?: {} | undefined;
@@ -11004,18 +11354,18 @@ declare var __VLS_10: {
                             filters?: Record<string, Function> | undefined;
                             mixins?: any[] | undefined;
                             extends?: any;
-                            beforeCreate?: (() => void) | undefined;
-                            created?: (() => void) | undefined;
-                            beforeMount?: (() => void) | undefined;
-                            mounted?: (() => void) | undefined;
-                            beforeUpdate?: (() => void) | undefined;
-                            updated?: (() => void) | undefined;
-                            activated?: (() => void) | undefined;
-                            deactivated?: (() => void) | undefined;
-                            beforeDestroy?: (() => void) | undefined;
-                            beforeUnmount?: (() => void) | undefined;
-                            destroyed?: (() => void) | undefined;
-                            unmounted?: (() => void) | undefined;
+                            beforeCreate?: (() => any) | undefined;
+                            created?: (() => any) | undefined;
+                            beforeMount?: (() => any) | undefined;
+                            mounted?: (() => any) | undefined;
+                            beforeUpdate?: (() => any) | undefined;
+                            updated?: (() => any) | undefined;
+                            activated?: (() => any) | undefined;
+                            deactivated?: (() => any) | undefined;
+                            beforeDestroy?: (() => any) | undefined;
+                            beforeUnmount?: (() => any) | undefined;
+                            destroyed?: (() => any) | undefined;
+                            unmounted?: (() => any) | undefined;
                             renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -11058,7 +11408,7 @@ declare var __VLS_10: {
                             template?: string | object | undefined;
                             render?: Function | undefined;
                             components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                            directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                            directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                             inheritAttrs?: boolean | undefined;
                             emits?: any;
                             slots?: {} | undefined;
@@ -11135,18 +11485,18 @@ declare var __VLS_10: {
                             filters?: Record<string, Function> | undefined;
                             mixins?: any[] | undefined;
                             extends?: any;
-                            beforeCreate?: (() => void) | undefined;
-                            created?: (() => void) | undefined;
-                            beforeMount?: (() => void) | undefined;
-                            mounted?: (() => void) | undefined;
-                            beforeUpdate?: (() => void) | undefined;
-                            updated?: (() => void) | undefined;
-                            activated?: (() => void) | undefined;
-                            deactivated?: (() => void) | undefined;
-                            beforeDestroy?: (() => void) | undefined;
-                            beforeUnmount?: (() => void) | undefined;
-                            destroyed?: (() => void) | undefined;
-                            unmounted?: (() => void) | undefined;
+                            beforeCreate?: (() => any) | undefined;
+                            created?: (() => any) | undefined;
+                            beforeMount?: (() => any) | undefined;
+                            mounted?: (() => any) | undefined;
+                            beforeUpdate?: (() => any) | undefined;
+                            updated?: (() => any) | undefined;
+                            activated?: (() => any) | undefined;
+                            deactivated?: (() => any) | undefined;
+                            beforeDestroy?: (() => any) | undefined;
+                            beforeUnmount?: (() => any) | undefined;
+                            destroyed?: (() => any) | undefined;
+                            unmounted?: (() => any) | undefined;
                             renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -11197,6 +11547,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11209,6 +11560,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11225,6 +11577,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11237,6 +11590,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11249,6 +11603,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11261,6 +11616,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11302,6 +11658,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -11338,7 +11695,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -11415,18 +11772,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -11469,7 +11826,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -11546,18 +11903,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -11604,6 +11961,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -11680,7 +12038,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -11757,18 +12115,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -11807,6 +12165,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: false | {
@@ -11826,6 +12202,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11838,6 +12215,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11854,6 +12232,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11866,6 +12245,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11878,6 +12258,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11890,6 +12271,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -11931,6 +12313,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -11967,7 +12350,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -12044,18 +12427,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -12098,7 +12481,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -12175,18 +12558,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -12233,6 +12616,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -12309,7 +12693,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -12386,18 +12770,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -12436,6 +12820,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: false | {
@@ -12455,6 +12857,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -12467,6 +12870,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -12483,6 +12887,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -12495,6 +12900,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -12507,6 +12913,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -12519,6 +12926,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -12560,6 +12968,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -12596,7 +13005,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -12673,18 +13082,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -12727,7 +13136,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -12804,18 +13213,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -12862,6 +13271,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -12938,7 +13348,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -13015,18 +13425,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -13065,6 +13475,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -13088,6 +13516,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -13124,7 +13553,7 @@ declare var __VLS_10: {
                             template?: string | object | undefined;
                             render?: Function | undefined;
                             components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                            directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                            directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                             inheritAttrs?: boolean | undefined;
                             emits?: any;
                             slots?: {} | undefined;
@@ -13201,18 +13630,18 @@ declare var __VLS_10: {
                             filters?: Record<string, Function> | undefined;
                             mixins?: any[] | undefined;
                             extends?: any;
-                            beforeCreate?: (() => void) | undefined;
-                            created?: (() => void) | undefined;
-                            beforeMount?: (() => void) | undefined;
-                            mounted?: (() => void) | undefined;
-                            beforeUpdate?: (() => void) | undefined;
-                            updated?: (() => void) | undefined;
-                            activated?: (() => void) | undefined;
-                            deactivated?: (() => void) | undefined;
-                            beforeDestroy?: (() => void) | undefined;
-                            beforeUnmount?: (() => void) | undefined;
-                            destroyed?: (() => void) | undefined;
-                            unmounted?: (() => void) | undefined;
+                            beforeCreate?: (() => any) | undefined;
+                            created?: (() => any) | undefined;
+                            beforeMount?: (() => any) | undefined;
+                            mounted?: (() => any) | undefined;
+                            beforeUpdate?: (() => any) | undefined;
+                            updated?: (() => any) | undefined;
+                            activated?: (() => any) | undefined;
+                            deactivated?: (() => any) | undefined;
+                            beforeDestroy?: (() => any) | undefined;
+                            beforeUnmount?: (() => any) | undefined;
+                            destroyed?: (() => any) | undefined;
+                            unmounted?: (() => any) | undefined;
                             renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -13255,7 +13684,7 @@ declare var __VLS_10: {
                             template?: string | object | undefined;
                             render?: Function | undefined;
                             components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                            directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                            directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                             inheritAttrs?: boolean | undefined;
                             emits?: any;
                             slots?: {} | undefined;
@@ -13332,18 +13761,18 @@ declare var __VLS_10: {
                             filters?: Record<string, Function> | undefined;
                             mixins?: any[] | undefined;
                             extends?: any;
-                            beforeCreate?: (() => void) | undefined;
-                            created?: (() => void) | undefined;
-                            beforeMount?: (() => void) | undefined;
-                            mounted?: (() => void) | undefined;
-                            beforeUpdate?: (() => void) | undefined;
-                            updated?: (() => void) | undefined;
-                            activated?: (() => void) | undefined;
-                            deactivated?: (() => void) | undefined;
-                            beforeDestroy?: (() => void) | undefined;
-                            beforeUnmount?: (() => void) | undefined;
-                            destroyed?: (() => void) | undefined;
-                            unmounted?: (() => void) | undefined;
+                            beforeCreate?: (() => any) | undefined;
+                            created?: (() => any) | undefined;
+                            beforeMount?: (() => any) | undefined;
+                            mounted?: (() => any) | undefined;
+                            beforeUpdate?: (() => any) | undefined;
+                            updated?: (() => any) | undefined;
+                            activated?: (() => any) | undefined;
+                            deactivated?: (() => any) | undefined;
+                            beforeDestroy?: (() => any) | undefined;
+                            beforeUnmount?: (() => any) | undefined;
+                            destroyed?: (() => any) | undefined;
+                            unmounted?: (() => any) | undefined;
                             renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                             errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -13394,6 +13823,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -13406,6 +13836,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -13422,6 +13853,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -13434,6 +13866,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -13446,6 +13879,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -13458,6 +13892,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -13499,6 +13934,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -13535,7 +13971,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -13612,18 +14048,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -13666,7 +14102,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -13743,18 +14179,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -13801,6 +14237,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -13877,7 +14314,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -13954,18 +14391,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -14004,6 +14441,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
                 cancelButton?: false | {
@@ -14023,6 +14478,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14035,6 +14491,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14051,6 +14508,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14063,6 +14521,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14075,6 +14534,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14087,6 +14547,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14128,6 +14589,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -14164,7 +14626,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -14241,18 +14703,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -14295,7 +14757,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -14372,18 +14834,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -14430,6 +14892,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -14506,7 +14969,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -14583,18 +15046,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -14633,6 +15096,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
                 headerActionsButton?: false | {
@@ -14652,6 +15133,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14664,6 +15146,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14680,6 +15163,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14692,6 +15176,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14704,6 +15189,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14716,6 +15202,7 @@ declare var __VLS_10: {
                         text?: import("lkt-vue-kernel").ValidTextValue;
                         class?: import("lkt-vue-kernel").ValidTextValue;
                         type?: import("lkt-vue-kernel").IconType | undefined;
+                        visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                         dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                         position?: import("lkt-vue-kernel").IconPosition | undefined;
                         events?: {
@@ -14757,6 +15244,7 @@ declare var __VLS_10: {
                                     text?: import("lkt-vue-kernel").ValidTextValue;
                                     class?: import("lkt-vue-kernel").ValidTextValue;
                                     type?: import("lkt-vue-kernel").IconType | undefined;
+                                    visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                                     dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                                     position?: import("lkt-vue-kernel").IconPosition | undefined;
                                     events?: {
@@ -14793,7 +15281,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -14870,18 +15358,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -14924,7 +15412,7 @@ declare var __VLS_10: {
                                         template?: string | object | undefined;
                                         render?: Function | undefined;
                                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                         inheritAttrs?: boolean | undefined;
                                         emits?: any;
                                         slots?: {} | undefined;
@@ -15001,18 +15489,18 @@ declare var __VLS_10: {
                                         filters?: Record<string, Function> | undefined;
                                         mixins?: any[] | undefined;
                                         extends?: any;
-                                        beforeCreate?: (() => void) | undefined;
-                                        created?: (() => void) | undefined;
-                                        beforeMount?: (() => void) | undefined;
-                                        mounted?: (() => void) | undefined;
-                                        beforeUpdate?: (() => void) | undefined;
-                                        updated?: (() => void) | undefined;
-                                        activated?: (() => void) | undefined;
-                                        deactivated?: (() => void) | undefined;
-                                        beforeDestroy?: (() => void) | undefined;
-                                        beforeUnmount?: (() => void) | undefined;
-                                        destroyed?: (() => void) | undefined;
-                                        unmounted?: (() => void) | undefined;
+                                        beforeCreate?: (() => any) | undefined;
+                                        created?: (() => any) | undefined;
+                                        beforeMount?: (() => any) | undefined;
+                                        mounted?: (() => any) | undefined;
+                                        beforeUpdate?: (() => any) | undefined;
+                                        updated?: (() => any) | undefined;
+                                        activated?: (() => any) | undefined;
+                                        deactivated?: (() => any) | undefined;
+                                        beforeDestroy?: (() => any) | undefined;
+                                        beforeUnmount?: (() => any) | undefined;
+                                        destroyed?: (() => any) | undefined;
+                                        unmounted?: (() => any) | undefined;
                                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -15059,6 +15547,7 @@ declare var __VLS_10: {
                             text?: import("lkt-vue-kernel").ValidTextValue;
                             class?: import("lkt-vue-kernel").ValidTextValue;
                             type?: import("lkt-vue-kernel").IconType | undefined;
+                            visualType?: import("lkt-vue-kernel").IconVisualType | undefined;
                             dot?: import("lkt-vue-kernel").ValidIconDot | undefined;
                             position?: import("lkt-vue-kernel").IconPosition | undefined;
                             events?: {
@@ -15135,7 +15624,7 @@ declare var __VLS_10: {
                                 template?: string | object | undefined;
                                 render?: Function | undefined;
                                 components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                                directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                                directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                                 inheritAttrs?: boolean | undefined;
                                 emits?: any;
                                 slots?: {} | undefined;
@@ -15212,18 +15701,18 @@ declare var __VLS_10: {
                                 filters?: Record<string, Function> | undefined;
                                 mixins?: any[] | undefined;
                                 extends?: any;
-                                beforeCreate?: (() => void) | undefined;
-                                created?: (() => void) | undefined;
-                                beforeMount?: (() => void) | undefined;
-                                mounted?: (() => void) | undefined;
-                                beforeUpdate?: (() => void) | undefined;
-                                updated?: (() => void) | undefined;
-                                activated?: (() => void) | undefined;
-                                deactivated?: (() => void) | undefined;
-                                beforeDestroy?: (() => void) | undefined;
-                                beforeUnmount?: (() => void) | undefined;
-                                destroyed?: (() => void) | undefined;
-                                unmounted?: (() => void) | undefined;
+                                beforeCreate?: (() => any) | undefined;
+                                created?: (() => any) | undefined;
+                                beforeMount?: (() => any) | undefined;
+                                mounted?: (() => any) | undefined;
+                                beforeUpdate?: (() => any) | undefined;
+                                updated?: (() => any) | undefined;
+                                activated?: (() => any) | undefined;
+                                deactivated?: (() => any) | undefined;
+                                beforeDestroy?: (() => any) | undefined;
+                                beforeUnmount?: (() => any) | undefined;
+                                destroyed?: (() => any) | undefined;
+                                unmounted?: (() => any) | undefined;
                                 renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                                 errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -15262,6 +15751,24 @@ declare var __VLS_10: {
                         click?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
                         httpStart?: Function | undefined;
                         httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
+                    } | undefined;
+                    preventDefault?: boolean | undefined;
+                    stopPropagation?: boolean | undefined;
+                    dispatchHttpNotifications?: boolean | undefined;
+                    hooks?: {
+                        onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                            path?: string | undefined;
+                            name?: string | undefined;
+                            hash?: string | undefined;
+                            params?: import("lkt-vue-kernel").LktObject | undefined;
+                            query?: import("lkt-vue-kernel").LktObject | undefined;
+                            replace?: boolean | undefined;
+                        } | undefined;
+                        onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        redirectType?: "replace" | "push" | undefined;
+                        onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                        onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
                     } | undefined;
                 } | undefined;
             } | undefined;
@@ -15321,7 +15828,7 @@ declare var __VLS_10: {
                         template?: string | object | undefined;
                         render?: Function | undefined;
                         components?: Record<string, import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>> | undefined;
-                        directives?: Record<string, import("vue").Directive<any, any, string, string>> | undefined;
+                        directives?: Record<string, import("vue").Directive<any, any, string, any>> | undefined;
                         inheritAttrs?: boolean | undefined;
                         emits?: any;
                         slots?: {} | undefined;
@@ -15398,18 +15905,18 @@ declare var __VLS_10: {
                         filters?: Record<string, Function> | undefined;
                         mixins?: any[] | undefined;
                         extends?: any;
-                        beforeCreate?: (() => void) | undefined;
-                        created?: (() => void) | undefined;
-                        beforeMount?: (() => void) | undefined;
-                        mounted?: (() => void) | undefined;
-                        beforeUpdate?: (() => void) | undefined;
-                        updated?: (() => void) | undefined;
-                        activated?: (() => void) | undefined;
-                        deactivated?: (() => void) | undefined;
-                        beforeDestroy?: (() => void) | undefined;
-                        beforeUnmount?: (() => void) | undefined;
-                        destroyed?: (() => void) | undefined;
-                        unmounted?: (() => void) | undefined;
+                        beforeCreate?: (() => any) | undefined;
+                        created?: (() => any) | undefined;
+                        beforeMount?: (() => any) | undefined;
+                        mounted?: (() => any) | undefined;
+                        beforeUpdate?: (() => any) | undefined;
+                        updated?: (() => any) | undefined;
+                        activated?: (() => any) | undefined;
+                        deactivated?: (() => any) | undefined;
+                        beforeDestroy?: (() => any) | undefined;
+                        beforeUnmount?: (() => any) | undefined;
+                        destroyed?: (() => any) | undefined;
+                        unmounted?: (() => any) | undefined;
                         renderTracked?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                         renderTriggered?: ((e: import("vue").DebuggerEvent) => void) | undefined;
                         errorCaptured?: ((err: unknown, instance: import("vue").ComponentPublicInstance | null, info: string) => boolean | void) | undefined;
@@ -15449,10 +15956,30 @@ declare var __VLS_10: {
                 httpStart?: Function | undefined;
                 httpEnd?: ((data: ClickEventArgs) => void | undefined | any) | undefined;
             } | undefined;
+            preventDefault?: boolean | undefined;
+            stopPropagation?: boolean | undefined;
+            dispatchHttpNotifications?: boolean | undefined;
+            hooks?: {
+                onSuccessRedirectTo?: string | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string) | ((data: ClickEventArgs) => string | import("lkt-vue-kernel").RouteConfig | ((data: import("lkt-vue-kernel").LktObject) => import("lkt-vue-kernel").RouteConfig | string)) | {
+                    path?: string | undefined;
+                    name?: string | undefined;
+                    hash?: string | undefined;
+                    params?: import("lkt-vue-kernel").LktObject | undefined;
+                    query?: import("lkt-vue-kernel").LktObject | undefined;
+                    replace?: boolean | undefined;
+                } | undefined;
+                onSuccessRedirectBack?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                redirectType?: "replace" | "push" | undefined;
+                onSuccessReload?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                onSuccessRefreshI18n?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+                onSuccessRefreshSetup?: boolean | ((data: ClickEventArgs) => boolean) | undefined;
+            } | undefined;
         } | undefined;
         prevHidden?: boolean | ((currentStep: StepProcessStepConfig, steps: StepProcessStepConfig[]) => boolean) | undefined;
+        excludedFromTotalCount?: boolean | (() => boolean) | undefined;
     }[];
 }, __VLS_25: {
+    visibleStep: any;
     currentStep: any;
     currentStepIndex: any;
     amountOfSteps: number;
