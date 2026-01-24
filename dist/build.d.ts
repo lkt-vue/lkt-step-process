@@ -1,4 +1,4 @@
-export { Xt as default };
-declare namespace Xt {
+export { qt as default };
+declare namespace qt {
     function install(e: any, a?: {}): void;
 }

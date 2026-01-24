@@ -15977,6 +15977,14 @@ declare var __VLS_10: {
         } | undefined;
         prevHidden?: boolean | ((currentStep: StepProcessStepConfig, steps: StepProcessStepConfig[]) => boolean) | undefined;
         excludedFromTotalCount?: boolean | (() => boolean) | undefined;
+        events?: {
+            enter: (args: {
+                from: string;
+            }) => void;
+            leave: (args: {
+                to: string;
+            }) => void;
+        } | undefined;
     }[];
 }, __VLS_25: {
     visibleStep: any;

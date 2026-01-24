@@ -192,6 +192,8 @@
         });
 
     const onNext = (data: any) => {
+            let fromStep = currentStep.value;
+
             let nextKey = stepsHaystack.value[currentStepIndex.value]?.nextKey;
             let nextIndex = currentStepIndex.value + 1;
 
@@ -204,7 +206,16 @@
                 if (needle > -1) nextIndex = needle;
             }
 
-            currentStep.value = stepsHaystack.value[nextIndex].key;
+            let toStep = stepsHaystack.value[nextIndex].key;
+
+            if (typeof currentStepConfig.value?.events?.leave === 'function') {
+                currentStepConfig.value?.events?.leave({to: toStep})
+            }
+
+            currentStep.value = toStep;
+            if (typeof currentStepConfig.value?.events?.enter === 'function') {
+                currentStepConfig.value?.events?.enter({from: fromStep})
+            }
             if (currentStepIndex.value === (stepsHaystack.value.length - 1)) {
                 emit('finish', data);
 
@@ -213,6 +224,8 @@
             }
         },
         onPrev = (data: any) => {
+            let fromStep = currentStep.value;
+
             let prevKey = stepsHaystack.value[currentStepIndex.value]?.prevKey;
             let nextIndex = currentStepIndex.value - 1;
 
@@ -225,7 +238,16 @@
                 if (needle > -1) nextIndex = needle;
             }
 
-            currentStep.value = stepsHaystack.value[nextIndex].key;
+            let toStep = stepsHaystack.value[nextIndex].key;
+
+            if (typeof currentStepConfig.value?.events?.leave === 'function') {
+                currentStepConfig.value?.events?.leave({to: toStep})
+            }
+
+            currentStep.value = toStep;
+            if (typeof currentStepConfig.value?.events?.enter === 'function') {
+                currentStepConfig.value?.events?.enter({from: fromStep})
+            }
             emit('prev', data);
         },
         canRenderStep = (stepKey:string) => {
